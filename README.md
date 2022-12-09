@@ -2,8 +2,8 @@
 Examples of simulations with QuantumEspresso
 
 
-1. Band Structure
-=================
+Band Structure
+===============
 
 ``band_structure`` containes
 
