@@ -1,0 +1,16 @@
+__pycache__
+*.py[cod]
+*.so
+
+*.egg-info
+dist
+build
+
+*.backup
+*.orig
+*.org
+do.sh
+
+*box/
+memo.txt
+
