@@ -6,6 +6,5 @@ Band Structure
 ---------------
 
 ``band_structure`` containes an example to calculate the electron band structure of silicon.
-
-* a
+In this directory, you can find ``scf.in``, ``nscf.in``, ``band.in``
 
