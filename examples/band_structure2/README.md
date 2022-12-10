@@ -4,7 +4,13 @@ Calculation of band structure with QuantumEspresso
 A few thing before starting the analysis 
 -----------------------------------------
 
+```
+$ ls ../pseudo
+README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 
+$ ls ../tools
+mk_pwinput.py   pw_keys.py
+```
 
 
 
