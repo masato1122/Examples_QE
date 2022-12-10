@@ -14,4 +14,6 @@ do.sh
 *box/
 memo.txt
 *.docx
+*.swo
+*.swp
 
