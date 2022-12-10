@@ -54,7 +54,7 @@ Options:
   --conv_thr=CONV_THR   convergence threshold for selfconsistency [1e-6]
 ```
 
-For example, you can assign a structure file name with "-f" or "--filename" option.
+For example, a structure file can be given with "-f" or "--filename" option.
 
 ```
 $ python ../tools/mk_pwinput.py -f ../Si.cif
