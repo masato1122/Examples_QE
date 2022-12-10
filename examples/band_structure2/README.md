@@ -140,11 +140,11 @@ is larger than that for the SCF calculation (20).
 In general, the SCF calculation is conducted with a coarser k-mesh 
 because the SCF takes longer time.
 
-Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated.
+Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated with the above command.
 
 ```
 $ ls
-
+README.md  dos.in  nscf_dos.in  out  pdos.in  scf.in  scf.out
 ```
 
 Run QE jobs:
