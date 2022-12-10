@@ -165,7 +165,7 @@ Calculte DOS with ``dos.x``:
 dos.x < dos.in | tee dos.out
 ```
 
-Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculated:
+Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculated with ``projwfc.x``:
 
 ```
 projwfc.x < pdos.in | tee pdos.out
