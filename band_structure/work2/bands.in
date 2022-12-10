@@ -1,0 +1,6 @@
+&bands
+    filband = 'Si.band'
+    lsym = .true.
+    outdir = './out'
+    prefix = 'Si'
+/

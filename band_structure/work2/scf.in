@@ -1,11 +1,9 @@
 &CONTROL
-  calculation = 'scf',
   outdir = './out',
   prefix = 'Si',
   pseudo_dir = '../pseudo',
 /
 &SYSTEM
-  ecutrho = 240.0,
   ecutwfc = 60.0,
   ibrav = 0,
   nat = 2,

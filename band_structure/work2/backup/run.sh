@@ -1,16 +1,15 @@
-python mk_qeinput.py \
+python ../tools/mk_pwinput.py \
     --filename ../Si.cif \
     --pseudo_dir ../pseudo \
     --outdir ./out \
+    --property scf \
     --reciprocal_density 20 \
-    --calculation scf
 
-python mk_qeinput.py \
+python ../tools/mk_pwinput.py \
     --filename ../Si.cif \
     --pseudo_dir ../pseudo \
     --outdir ./out \
-    --reciprocal_density 20 \
-    --calculation nscf
-
+    --property dos \
+    --reciprocal_density 40 \
 
 
