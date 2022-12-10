@@ -58,7 +58,6 @@ For example, a structure file can be given with "-f" or "--filename" option.
 
 ```
 $ python ../tools/mk_pwinput.py -f ../Si.cif
-
 ```
 
 If you want to know details of input parameters of pw.x of QE, see 
@@ -70,6 +69,9 @@ Calcualtion process
 
 1. Self-consistent field (SCF) calculation
 
+First of all, the charge distribution in the crystal structure is calculated with SCF method. 
+The input script for the SCF calculation can be generated as below.
+
 ```
 python ../tools/mk_pwinput.py \
     --filename ../Si.cif \
@@ -77,7 +79,11 @@ python ../tools/mk_pwinput.py \
     --outdir ./out \
     --property scf \
     --reciprocal_density 20 
+```
 
+
+
+```
 pw.x < scf.in | tee scf.out
 ```
 
