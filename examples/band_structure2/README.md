@@ -8,7 +8,7 @@ with QuantumEspresso (QE) following the process described below.
 A few things before starting the analysis 
 ------------------------------------------
 
-# 1. Check a pseudopotential functional file
+### 1. Check a pseudopotential functional file
 
 ```
 $ ls ../pseudo
