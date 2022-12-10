@@ -67,7 +67,8 @@ https://www.quantum-espresso.org/Doc/INPUT_PW.html.
 Calcualtion process
 --------------------
 
-1. Self-consistent field (SCF) calculation
+Self-consistent field (SCF) calculation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First of all, the charge distribution in the crystal structure is calculated with SCF method. 
 The input script for the SCF calculation (``scf.in``) can be generated as below.
