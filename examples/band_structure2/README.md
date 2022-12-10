@@ -1,5 +1,15 @@
-Calculation process
-===================
+Calculation of band structure with QuantumEspresso
+==================================================
+
+A few thing before starting the analysis 
+-----------------------------------------
+
+
+
+
+
+Calcualtion process
+--------------------
 
 1. Self-consistent field (SCF) calculation
 

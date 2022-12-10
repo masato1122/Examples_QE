@@ -212,7 +212,7 @@ if __name__ == '__main__':
     
     parser.add_option("-f", "--filename", dest="filename", type="string",
                       default="../Si.cif", 
-                      help="file name of a structure [../Si.cif]")
+                      help="structure file name [../Si.cif]")
     
     parser.add_option("--reciprocal_density", dest="reciprocal_density", 
                       type="float", default=20, 
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     
     parser.add_option("--property", dest="property", type="string",
                       default='scf',
-                      help="property (scf, dos, bands, ...) [scf]")
+                      help="property analyzed (scf, dos, bands, ...) [scf]")
     
     parser.add_option("--pseudo_dir", dest="pseudo_dir", type="string",
                       default="../pseudo", 
