@@ -7,6 +7,6 @@ ext="x"
 #pw.${ext} < nscf_dos.in | tee nscf_dos.out
 #dos.${ext} < dos.in | tee dos.out
 #projwfc.${ext} < pdos.in | tee pdos.out
-#bands.${ext} < bands.in | tee bands.out
+bands.${ext} < bands.in | tee bands.out
 plotband.${ext} < plotband.in
 
