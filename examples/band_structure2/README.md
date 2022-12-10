@@ -134,7 +134,8 @@ python ../tools/mk_pwinput.py \
     --reciprocal_density 40
 ```
 
-> **_NOTE:_** Note that k-mesh density, defined by "--reciprocal_density" option, for DOS (40)
+> **_NOTE:_** 
+The k-mesh density, defined by "--reciprocal_density" option, for DOS (40)
 is larger than that for the SCF calculation (20). 
 In general, the SCF calculation is conducted with a coarser k-mesh 
 because the SCF takes longer time.
@@ -145,7 +146,6 @@ Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated.
 $ ls
 
 ```
-
 
 Run QE jobs:
 
