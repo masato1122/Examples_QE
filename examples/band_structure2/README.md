@@ -4,7 +4,7 @@ Calculation of band structure with QuantumEspresso (QE)
 A few thing before starting the analysis 
 -----------------------------------------
 
-1. Check if you have important files
+1. Check if you have properly got important files.
 
 ```
 $ ls ../pseudo
@@ -14,9 +14,14 @@ $ ls ../tools
 mk_pwinput.py   pw_keys.py
 ```
 
-2. Take a look a python script
+2. Take a look a python script.
 
 ``mk_pwinput.py`` is used to make input scripts of QE.
+You can check what kind of options the code has with "-h" option.
+
+```
+$ python ../tools/mk_pwinput.py -h
+```
 
 
 Calcualtion process
