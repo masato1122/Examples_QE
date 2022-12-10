@@ -12,6 +12,8 @@ Prerequisite
 Installation
 ------------
 
+To use python scripts, ``mk_pwinput.py``, in tools, following libraries are required.
+
 ```
 pip install pymatgen seekpath seekpath pyyaml
 ```
