@@ -16,7 +16,7 @@ pw.x < scf.in | tee scf.out
 
 2. Non self-consistent field (NSCF) calculation
 
-2-1. DOS
+2.1. DOS
 
 ```
 python ../tools/mk_pwinput.py \
