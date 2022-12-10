@@ -67,8 +67,7 @@ https://www.quantum-espresso.org/Doc/INPUT_PW.html.
 Calcualtion process
 --------------------
 
-Self-consistent field (SCF) calculation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Self-consistent field (SCF) calculation
 
 First of all, the charge distribution in the crystal structure is calculated with SCF method. 
 The input script for the SCF calculation (``scf.in``) can be generated as below.
@@ -148,13 +147,31 @@ $ ls
 README.md  dos.in  nscf_dos.in  out  pdos.in  scf.in  scf.out
 ```
 
-Run QE jobs:
+Run a NSCF calculation for DOS:
 
 ```
-pw.x < nscf_dos.in | tee nscf_dos.out
+$ pw.x < nscf_dos.in | tee nscf_dos.out
+```
+
+You can find more wfc\*.dat files in ``./out/Si.save``.
+
+```
+$ ls ./out/Si.save
+```
+
+Calculte DOS with ``dos.x``:
+
+```
 dos.x < dos.in | tee dos.out
+```
+
+Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculated:
+
+```
 projwfc.x < pdos.in | tee pdos.out
 ```
+
+3. Band structure
 
 Calculate electronic band structure:
 
