@@ -2,7 +2,7 @@ Calculation of band structure with QuantumEspresso (QE)
 ========================================================
 
 One can learn how to calculate electronic states such as band structure and density of states (DOS) 
-with QuantumEspresso (QE) following the process shown below.
+with QuantumEspresso (QE) following the process described below.
 
 
 A few things before starting the analysis 
@@ -19,9 +19,9 @@ A UPF (unified pseudopotential functional) file used in this example can be foun
 If you want, you can download UPF files of other elements from 
 https://www.materialscloud.org/discover/sssp/table/efficiency.
 
-2. Take a look a python script.
+2. Take a look at python scripts
 
-Python scripts generating input scripts for this example are prepared in ``../tools``.
+Python scripts generating input scripts for QE are prepared in ``../tools``.
 
 ```
 $ ls ../tools
@@ -30,7 +30,7 @@ mk_pwinput.py   pw_keys.py
 
 ``mk_pwinput.py`` is used to make input scripts of QE. 
 (Users don't need to use ``pw_keys.py`` which is called from ``mk_pwinput.py``.)
-One can check what kind of options the code has with "-h" option.
+One can check options of this code with "-h" option.
 
 ```
 $ python ../tools/mk_pwinput.py -h
