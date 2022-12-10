@@ -109,17 +109,34 @@ def write_additional_file(propt, info):
     
     ###
     if propt == 'plotband':
+        
         lines = []
         file_band = info['prefix'] + '.band'
         file_xmgr = info['prefix'] + '.band.xmgr'
         file_ps = info['prefix'] + '.band.ps'
-        file_xml = info['outdir'] + '/' + info['prefix'] + '.xml'
-        print(file_xml)
+        file_dos = info['prefix'] + '.dos'
+        
+        ##
+        try:
+            with open(file_dos) as f:
+                lines_dos = f.readlines()
+                data = lines_dos[0].split()
+                efermi = float(data[-2])
+        except Exception:
+            efermi = 0.
+            print(" WARRNING: fermi energy cannot be found in %s." % (
+                file_dos))
+        
         lines.append(file_band)
         lines.append("0 14")
         lines.append(file_xmgr)
         lines.append(file_ps)
-    
+        lines.append("%f" % efermi)
+        lines.append("1 %f" % efermi)
+        
+        outfile = "plotband.in"
+        with open(outfile, 'w') as f:
+            f.write("\n".join(lines))
 
 def main(options):
     

@@ -8,13 +8,12 @@ Prerequisite
 * pymatgen
 * seekpath
 * pyyaml
-* XML2Dcit
 
 Installation
 ------------
 
 ```
-pip install pymatgen seekpath seekpath pyyaml XML2Dict
+pip install pymatgen seekpath seekpath pyyaml
 ```
 
 Band Structure
