@@ -120,7 +120,7 @@ Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./ou
 2. Non self-consistent field (NSCF) calculation
 
 Once wavefunctions, namely charge density, are obtained,
-different electronic states such as density of states (DOS) and band structure
+electronic states such as density of states (DOS) and band structure
 can be calculated with the obtained wavefunctions.
 
 Make an input script for DOS:
@@ -134,11 +134,10 @@ python ../tools/mk_pwinput.py \
     --reciprocal_density 40
 ```
 
-Note that k-mesh density, defined by "--reciprocal_density" option, for DOS (40)
+> **_NOTE:_** Note that k-mesh density, defined by "--reciprocal_density" option, for DOS (40)
 is larger than that for the SCF calculation (20). 
 In general, the SCF calculation is conducted with a coarser k-mesh 
 because the SCF takes longer time.
-
 
 Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated.
 
