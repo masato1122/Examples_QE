@@ -124,7 +124,7 @@ Once wavefunctions, namely charge density, are obtained,
 electronic states such as density of states (DOS) and band structure
 can be calculated with the obtained wavefunctions.
 
-Make an input script for DOS:
+Make input scripts for DOS calculation:
 
 ```
 python ../tools/mk_pwinput.py \
@@ -187,10 +187,17 @@ python ../tools/mk_pwinput.py \
     --property bands
 ```
 
+Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generated:
 
+Calculate the band structure:
 
 ```
 bands.x < bands.in | tee bands.out
+```
+
+Plot the calculated band structure:
+
+```
 plotband.x < plotband.in
 ```
 
