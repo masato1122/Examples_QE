@@ -99,12 +99,12 @@ The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
 
 a) To print the result in the terminal and output in a file (``scf.out``):
 ```
-pw.x < scf.in | tee scf.out
+$ pw.x < scf.in | tee scf.out
 ```
 
 b) To output in a file only:
 ```
-pw.x < scf.in > scf.out
+$ pw.x < scf.in > scf.out
 ```
 
 Make sure that you have got ``./out`` directory after the calculation.
@@ -162,13 +162,13 @@ $ ls ./out/Si.save
 Calculte DOS with ``dos.x``:
 
 ```
-dos.x < dos.in | tee dos.out
+$ dos.x < dos.in | tee dos.out
 ```
 
 Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculated with ``projwfc.x``:
 
 ```
-projwfc.x < pdos.in | tee pdos.out
+$ projwfc.x < pdos.in | tee pdos.out
 ```
 
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
