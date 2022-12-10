@@ -1,8 +1,10 @@
-Calculation of band structure with QuantumEspresso
-==================================================
+Calculation of band structure with QuantumEspresso (QE)
+========================================================
 
 A few thing before starting the analysis 
 -----------------------------------------
+
+1. Check if you have important files
 
 ```
 $ ls ../pseudo
@@ -12,6 +14,9 @@ $ ls ../tools
 mk_pwinput.py   pw_keys.py
 ```
 
+2. Take a look a python script
+
+``mk_pwinput.py`` is used to make input scripts of QE.
 
 
 Calcualtion process
