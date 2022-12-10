@@ -114,13 +114,16 @@ $ ls ./out
 Si.save Si.xml
 ```
 
-Wavefunctions (wfc\*.dat) obtained with the SCF calculation are waved in ``./out/Si.save``.
-
+Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./out/Si.save``.
 
 
 2. Non self-consistent field (NSCF) calculation
 
-Calculate density of states (DOS) and partial DOS (PDOS):
+Once wavefunctions, namely charge density, are obtained,
+different electronic states such as density of states (DOS) and band structure
+can be calculated with the obtained wavefunctions.
+
+Make an input script for DOS:
 
 ```
 python ../tools/mk_pwinput.py \
@@ -129,7 +132,25 @@ python ../tools/mk_pwinput.py \
     --outdir ./out \
     --property dos \
     --reciprocal_density 40
+```
 
+Note that k-mesh density, defined by "--reciprocal_density" option, for DOS (40)
+is larger than that for the SCF calculation (20). 
+In general, the SCF calculation is conducted with a coarser k-mesh 
+because the SCF takes longer time.
+
+
+Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated.
+
+```
+$ ls
+
+```
+
+
+Run QE jobs:
+
+```
 pw.x < nscf_dos.in | tee nscf_dos.out
 dos.x < dos.in | tee dos.out
 projwfc.x < pdos.in | tee pdos.out
