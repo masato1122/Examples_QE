@@ -216,7 +216,7 @@ if __name__ == '__main__':
     
     parser.add_option("--reciprocal_density", dest="reciprocal_density", 
                       type="float", default=20, 
-                      help="kmesh density in the reciprocal space [20]")
+                      help="k-mesh density in the reciprocal space [20]")
     
     parser.add_option("--property", dest="property", type="string",
                       default='scf',
