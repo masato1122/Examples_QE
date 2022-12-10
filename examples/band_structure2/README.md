@@ -31,7 +31,7 @@ mk_pwinput.py   pw_keys.py
 
 ``mk_pwinput.py`` is used to make input scripts of QE. 
 (Users don't need to use ``pw_keys.py`` which is called from ``mk_pwinput.py``.)
-One can check options of this code with "-h" option.
+The options of the code can be checked with "-h" option.
 
 ```
 $ python ../tools/mk_pwinput.py -h
@@ -61,7 +61,7 @@ For example, a structure file can be given with "-f" or "--filename" option.
 $ python ../tools/mk_pwinput.py -f ../Si.cif
 ```
 
-If you want to know details of input parameters of pw.x of QE, see 
+> If you want to know details of input parameters of pw.x of QE, see 
 https://www.quantum-espresso.org/Doc/INPUT_PW.html.
 
 
