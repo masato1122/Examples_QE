@@ -8,7 +8,7 @@ with QuantumEspresso (QE) following the process described below.
 A few things before starting the analysis 
 ------------------------------------------
 
-1. Check a pseudopotential functional file
+# 1. Check a pseudopotential functional file
 
 ```
 $ ls ../pseudo
@@ -117,7 +117,7 @@ Si.save Si.xml
 Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./out/Si.save``.
 
 
-2. Non self-consistent field (NSCF) calculation
+2. DOS with non self-consistent field (NSCF) calculation
 
 Once wavefunctions, namely charge density, are obtained,
 electronic states such as density of states (DOS) and band structure
@@ -172,7 +172,6 @@ projwfc.x < pdos.in | tee pdos.out
 ```
 
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
-
 
 
 3. Band structure
