@@ -7,12 +7,14 @@ Prerequisite
 * python
 * pymatgen
 * seekpath
+* pyyaml
+* XML2Dcit
 
-Instalation
+Installation
 ------------
 
 ```
-pip install pymatgen seekpath
+pip install pymatgen seekpath seekpath pyyaml XML2Dict
 ```
 
 Band Structure

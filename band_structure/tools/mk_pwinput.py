@@ -101,10 +101,25 @@ def write_additional_file(propt, info):
     else:
         pass
     
-    outfile = propt + '.in'
-    with open(outfile, 'w') as f:
-        f90nml.write(indata, f)
-        print(" Output", outfile)
+    if len(indata) > 0: 
+        outfile = propt + '.in'
+        with open(outfile, 'w') as f:
+            f90nml.write(indata, f)
+            print(" Output", outfile)
+    
+    ###
+    if propt == 'plotband':
+        lines = []
+        file_band = info['prefix'] + '.band'
+        file_xmgr = info['prefix'] + '.band.xmgr'
+        file_ps = info['prefix'] + '.band.ps'
+        file_xml = info['outdir'] + '/' + info['prefix'] + '.xml'
+        print(file_xml)
+        lines.append(file_band)
+        lines.append("0 14")
+        lines.append(file_xmgr)
+        lines.append(file_ps)
+    
 
 def main(options):
     
@@ -167,6 +182,8 @@ def main(options):
         write_additional_file(propt, dict_options)
         if propt == 'dos':
             write_additional_file('pdos', dict_options)
+        if propt == 'bands':
+            write_additional_file('plotband', dict_options)
 
     pwinput.write_file(outfile)
     print(" Output", outfile)
