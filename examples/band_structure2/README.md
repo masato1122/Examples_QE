@@ -19,7 +19,7 @@ A UPF (unified pseudopotential functional) file used in this example can be foun
 If you want, you can download UPF files of other elements from 
 https://www.materialscloud.org/discover/sssp/table/efficiency.
 
-2. Take a look at python scripts
+### 2. Take a look at python scripts
 
 Python scripts generating input scripts for QE are prepared in ``../tools``.
 
@@ -67,7 +67,7 @@ https://www.quantum-espresso.org/Doc/INPUT_PW.html.
 Calcualtion process
 --------------------
 
-1. Self-consistent field (SCF) calculation
+### 1. Self-consistent field (SCF) calculation
 
 First of all, the charge distribution in the crystal structure is calculated with SCF method. 
 The input script for the SCF calculation (``scf.in``) can be generated as below.
@@ -117,7 +117,7 @@ Si.save Si.xml
 Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./out/Si.save``.
 
 
-2. DOS with non self-consistent field (NSCF) calculation
+### 2. DOS with non self-consistent field (NSCF) calculation
 
 Once wavefunctions, namely charge density, are obtained,
 electronic states such as density of states (DOS) and band structure
@@ -174,7 +174,7 @@ projwfc.x < pdos.in | tee pdos.out
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
 
 
-3. Band structure
+### 3. Band structure
 
 Calculate electronic band structure:
 
