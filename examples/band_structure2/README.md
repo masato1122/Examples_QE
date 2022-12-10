@@ -165,7 +165,7 @@ Calculte DOS with ``dos.x``:
 $ dos.x < dos.in | tee dos.out
 ```
 
-Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculated with ``projwfc.x``:
+Partical DOS (PDOS), which represent DOS on each site (atom), can also be calculated with ``projwfc.x``:
 
 ```
 $ projwfc.x < pdos.in | tee pdos.out
@@ -176,16 +176,19 @@ PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
 
 ### 3. Band structure
 
-Calculate electronic band structure:
+Prepare input scripts for band calculation:
 
 ```
 python ../tools/mk_pwinput.py \
     --filename ../Si.cif \
     --pseudo_dir ../pseudo \
     --outdir ./out \
-    --property bands \
-    --reciprocal_density 40 
+    --property bands
+```
 
+
+
+```
 bands.x < bands.in | tee bands.out
 plotband.x < plotband.in
 ```
