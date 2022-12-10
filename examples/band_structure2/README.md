@@ -1,8 +1,8 @@
 Caltulation process
 ===================
 
-1. Self-consistent field (SCF) calculation
--------------------------------------------
+Self-consistent field (SCF) calculation
+----------------------------------------
 
 ```
 python ../tools/mk_pwinput.py \
