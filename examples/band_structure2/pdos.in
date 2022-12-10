@@ -1,5 +1,0 @@
-&projwfc
-    degauss = 0.01
-    outdir = './out'
-    prefix = 'Si'
-/

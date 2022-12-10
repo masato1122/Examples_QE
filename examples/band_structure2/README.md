@@ -9,7 +9,7 @@ python ../tools/mk_pwinput.py \
     --pseudo_dir ../pseudo \
     --outdir ./out \
     --property scf \
-    --reciprocal_density 20 \
+    --reciprocal_density 20 
 
 pw.x < scf.in | tee scf.out
 ```
@@ -24,7 +24,7 @@ python ../tools/mk_pwinput.py \
     --pseudo_dir ../pseudo \
     --outdir ./out \
     --property dos \
-    --reciprocal_density 40 \
+    --reciprocal_density 40
 
 pw.x < nscf_dos.in | tee nscf_dos.out
 dos.x < dos.in | tee dos.out
@@ -39,7 +39,7 @@ python ../tools/mk_pwinput.py \
     --pseudo_dir ../pseudo \
     --outdir ./out \
     --property bands \
-    --reciprocal_density 40 \
+    --reciprocal_density 40 
 
 bands.x < bands.in | tee bands.out
 plotband.x < plotband.in
