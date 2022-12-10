@@ -5,10 +5,14 @@ One can learn how to calculate electronic states such as band structure and dens
 with QuantumEspresso (QE) following the process shown below.
 
 
-A few thing before starting the analysis 
------------------------------------------
+A few things before starting the analysis 
+------------------------------------------
 
 1. Check if you have properly got important files.
+
+A UPF (unified pseudopotential functional) file used in this example can be found in ``../pseudo`` directory.
+You can download UPF files of other elements from 
+https://www.materialscloud.org/discover/sssp/table/efficiency.
 
 ```
 $ ls ../pseudo
@@ -16,7 +20,6 @@ README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 
 $ ls ../tools
 mk_pwinput.py   pw_keys.py
-
 ```
 
 2. Take a look a python script.
@@ -44,7 +47,6 @@ Options:
                         kinetic energy cutoff for charge density and potential
                         [4.0]
   --conv_thr=CONV_THR   convergence threshold for selfconsistency [1e-6]
-
 ```
 
 For example, you can assign a structure file name with "-f" or "--filename" option.
