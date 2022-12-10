@@ -1,7 +1,7 @@
 Calculation of band structure with QuantumEspresso (QE)
 ========================================================
 
-You can learn how to calculate electronic states such as band structure and density of states (DOS) 
+One can learn how to calculate electronic states such as band structure and density of states (DOS) 
 with QuantumEspresso (QE) following the process shown below.
 
 
@@ -54,6 +54,8 @@ $ python ../tools/mk_pwinput.py -f ../Si.cif
 
 ```
 
+If you want to know details of input parameters of pw.x of QE, see 
+https://www.quantum-espresso.org/Doc/INPUT_PW.html.
 
 
 Calcualtion process
