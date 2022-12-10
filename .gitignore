@@ -11,6 +11,7 @@ build
 *.org
 do.sh
 
+.DS_Store
 *box/
 memo.txt
 *.docx
