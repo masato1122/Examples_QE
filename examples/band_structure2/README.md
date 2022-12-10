@@ -16,7 +16,8 @@ README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 ```
 
 A UPF (unified pseudopotential functional) file used in this example can be found in ``../pseudo`` directory.
-If you want, you can download UPF files of other elements from 
+
+> If you want, you can download UPF files of other elements from 
 https://www.materialscloud.org/discover/sssp/table/efficiency.
 
 ### 2. Take a look at python scripts

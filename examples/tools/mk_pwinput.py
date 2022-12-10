@@ -30,12 +30,14 @@ def generate_kmesh_density(structure, reciprocal_density=20):
         style = 'gamma'
     return kpts, kpts_shift, style
 
-def get_kpath(structure, dk=0.05):
+def get_kpath(structure, delta_k=0.02):
     """ Generate and return kpoint path for band structure
     Args
     ----
     structure : Pymatgen Structure obj
         primitive cell
+
+    delta_k : float
     """
     kpath = KPathSeek(structure).kpath
     kpoints = kpath['kpoints']
@@ -48,18 +50,19 @@ def get_kpath(structure, dk=0.05):
     klist.append("")
     for kline in path:
         for kp in kline:
-            klist.append(" %13.8f" * 3 % tuple(kpoints[kp]))
+            klist.append(" %12.8f" * 3 % tuple(kpoints[kp]))
             
+            ### calculate number of k-points between two symmetric points
             if count == 0:
                 nk = 30
             else:
-                kl = np.linalg.norm(kpoints[kp] - kpre)
-                nk = int(kl / dk + 0.5)
+                kl = np.linalg.norm(np.asarray(kpoints[kp]) - kpre)
+                nk = int(kl / delta_k + 0.5)
             
-            klist[-1] += " %d" % (nk)
-
+            klist[-1] += "  %d\n" % (nk)
+            
             count += 1
-            kpre = kpoints[kp]
+            kpre = np.asarray(kpoints[kp])
     
     ###
 
@@ -151,6 +154,7 @@ def write_additional_file(propt, info):
         outfile = "plotband.in"
         with open(outfile, 'w') as f:
             f.write("\n".join(lines))
+            print(" Output", outfile)
 
 def main(options):
     
