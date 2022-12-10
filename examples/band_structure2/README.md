@@ -171,6 +171,10 @@ Partical DOS (PDOS) which represent DOS on each site (atom) can also be calculat
 projwfc.x < pdos.in | tee pdos.out
 ```
 
+PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
+
+
+
 3. Band structure
 
 Calculate electronic band structure:
