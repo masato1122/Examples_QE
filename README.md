@@ -1,6 +1,19 @@
 # Examples_QE
 Examples of simulations with QuantumEspresso
 
+Prerequisite
+------------
+
+* python
+* pymatgen
+* seekpath
+
+Instalation
+------------
+
+```
+pip install pymatgen seekpath
+```
 
 Band Structure
 ---------------
