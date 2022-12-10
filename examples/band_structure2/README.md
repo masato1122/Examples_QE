@@ -70,7 +70,7 @@ Calcualtion process
 1. Self-consistent field (SCF) calculation
 
 First of all, the charge distribution in the crystal structure is calculated with SCF method. 
-The input script for the SCF calculation can be generated as below.
+The input script for the SCF calculation (``scf.in``) can be generated as below.
 
 ```
 python ../tools/mk_pwinput.py \
@@ -81,11 +81,18 @@ python ../tools/mk_pwinput.py \
     --reciprocal_density 20 
 ```
 
+Check ``scf.in`` is generated properly:
 
+```
+$ less scf.in
+```
+
+The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows):
 
 ```
 pw.x < scf.in | tee scf.out
 ```
+
 
 2. Non self-consistent field (NSCF) calculation
 
