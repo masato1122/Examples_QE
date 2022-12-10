@@ -43,13 +43,27 @@ def get_kpath(structure, dk=0.05):
     
     count = 0
     klist = []
+    klengths = []
+    kpre = None
     klist.append("")
     for kline in path:
         for kp in kline:
             klist.append(" %13.8f" * 3 % tuple(kpoints[kp]))
-            klist[-1] += " %d\n" % (30)
+            
+            if count == 0:
+                nk = 30
+            else:
+                kl = np.linalg.norm(kpoints[kp] - kpre)
+                nk = int(kl / dk + 0.5)
+            
+            klist[-1] += " %d" % (nk)
+
             count += 1
+            kpre = kpoints[kp]
     
+    ###
+
+
     klist[0] = "%d\n" % count
     return klist
 
