@@ -97,15 +97,25 @@ $ less scf.in
 
 The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
 
-To print the result in the terminal and output in a file (``scf.out``):
+a) To print the result in the terminal and output in a file (``scf.out``):
 ```
 pw.x < scf.in | tee scf.out
 ```
 
-To output in a file only:
+b) To output in a file only:
 ```
 pw.x < scf.in > scf.out
 ```
+
+Make sure that you have got ``./out`` directory after the calculation.
+
+```
+$ ls ./out
+Si.save Si.xml
+```
+
+Wavefunctions (wfc\*.dat) obtained with the SCF calculation are waved in ``./out/Si.save``.
+
 
 
 2. Non self-consistent field (NSCF) calculation
