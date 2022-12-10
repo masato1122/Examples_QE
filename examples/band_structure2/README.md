@@ -85,12 +85,26 @@ Check ``scf.in`` is generated properly:
 
 ```
 $ less scf.in
+&CONTROL
+  outdir = './out',
+  prefix = 'Si',
+  pseudo_dir = '../pseudo',
+/
+&SYSTEM
+  ecutwfc = 60.0,
+...
 ```
 
-The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows):
+The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
 
+To print the result in the terminal and output in a file (``scf.out``):
 ```
 pw.x < scf.in | tee scf.out
+```
+
+To output in a file only:
+```
+pw.x < scf.in > scf.out
 ```
 
 
