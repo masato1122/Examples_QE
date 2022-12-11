@@ -1,5 +1,0 @@
-&dos
-    fildos = 'Si.dos'
-    outdir = './out'
-    prefix = 'Si'
-/
