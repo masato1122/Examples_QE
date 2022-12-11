@@ -28,7 +28,7 @@ Installation of these examples
 git clone https://github.com/masato1122/Examples_QE.git
 ```
 
-If you don't have ``git`` command, download zip file and unzip under the directory you like.
+If you don't have ``git`` command, download a zip file and unzip under the directory you like.
 
 
 Band structure
@@ -39,3 +39,4 @@ Band structure
 Move to this directory in your terminal with ``cd ./Examples_QE/examples/band_structure`` and
 follow the description written in 
 https://github.com/masato1122/Examples_QE/tree/main/examples/band_structure.
+
