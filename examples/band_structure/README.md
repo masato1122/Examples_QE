@@ -15,7 +15,7 @@ Check a few things before starting the analysis
 
 ```
 $ pwd
-(*location depending on your environment*)/Examples_QE/examples/band_structure
+(location depending on your environment)/Examples_QE/examples/band_structure
 ```
 
 ### 1. Check a pseudopotential functional file used in this example
@@ -293,10 +293,11 @@ Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
 The number of electrons in a real system is $N_{el} N_{cell}$, 
 where 
 $N_{el}$ is the number of electrons in the primitive cell (two for silicon), and
-$N_{cell}$ is the number of primitive cells in the system.
-These electrons are at the valence bands (below Fermi energy) in the ground state.
+$N_{cell}$ is the number of primitive cells in the system, 
+which corresponds to the number of k-points $N_{k}$.
+The electrons are at the valence bands (below Fermi energy) in the ground state.
 
-> **NOTE:** You can say *electron*
+> **NOTE:** Points in the band structure could be called *electron* at the valence bands under the ground state. *State* is more precise in general because electrons may not exist at corresponding states.
 
 
 #### 5. Count the number of states in the band structure below the Fermi level.
