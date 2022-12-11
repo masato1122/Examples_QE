@@ -106,13 +106,37 @@ Make sure that ``scf.in`` is generated properly:
 ```
 $ less scf.in
 &CONTROL
+  calculation = 'scf',
   outdir = './out',
   prefix = 'Si',
   pseudo_dir = '../pseudo',
+  restart_mode = 'from_scratch',
 /
 &SYSTEM
   ecutwfc = 60.0,
-...
+  occupations = 'fixed',
+  ibrav = 0,
+  nat = 2,
+  ntyp = 1,
+/
+&ELECTRONS
+  conv_thr = 1d-06,
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Si  28.0855 Si.pbesol-n-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+  Si 0.250000 0.250000 0.250000
+  Si 0.500000 0.500000 0.500000
+K_POINTS automatic
+  4 4 4 0 0 0
+CELL_PARAMETERS angstrom
+  -2.734364 -2.734364 0.000000
+  -2.734364 0.000000 -2.734364
+  0.000000 -2.734364 -2.734364
 ```
 
 The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
