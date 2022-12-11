@@ -159,6 +159,12 @@ Make sure that ``./out`` directory was generated after the calculation.
 ```
 $ ls ./out
 Si.save Si.xml
+
+$ ls out/Si.save/
+Si.pbesol-n-rrkjus_psl.1.0.0.UPF wfc2.dat                         wfc6.dat
+charge-density.dat               wfc3.dat                         wfc7.dat
+data-file-schema.xml             wfc4.dat                         wfc8.dat
+wfc1.dat                         wfc5.dat
 ```
 
 Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./out/Si.save``.
