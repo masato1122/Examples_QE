@@ -32,7 +32,7 @@ https://www.materialscloud.org/discover/sssp/table/efficiency.
 
 ### 2. Take a look at python scripts
 
-> **NOTE:** While python scripts may be useful to generate input scripts, if you have troubles to use them, you can use input scripts for QE in ``./scripts`` without using the python scripts.
+> **NOTE:** While python scripts may be useful to generate input scripts for QE, if you have troubles to use them, you can use files in ``./scripts`` without using the python scripts.
 
 Python scripts generating input scripts for QE are prepared in ``../tools``.
 
@@ -95,6 +95,7 @@ python ../tools/mk_pwinput.py \
     --property scf \
     --reciprocal_density 20 
 ```
+If you have an error, you can use the file in ``./scripts``: ``cp ./scripts/scf.in ./``.
 
 Make sure that ``scf.in`` is generated properly:
 
