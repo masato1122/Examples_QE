@@ -18,7 +18,7 @@ $ pwd
 (location depending on your environment)/Examples_QE/examples/band_structure
 ```
 
-### 1. Check a pseudopotential functional file
+### 1. Check a pseudopotential functional file used in this example
 
 ```
 $ ls ../pseudo
