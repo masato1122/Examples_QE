@@ -19,4 +19,6 @@ memo.txt
 *.swp
 out
 backup
+del.sh
+old
 
