@@ -259,7 +259,7 @@ or
 python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 ```
 
-### 4. Exercise
+### 4. Exercises
 
 #### 1. Calculate the total energy with different k-mesh densities.
 
