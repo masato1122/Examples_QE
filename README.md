@@ -1,5 +1,9 @@
 # Examples_QE
-Examples of simulations with QuantumEspresso
+Examples for QuantumEspresso. 
+
+Examples found here were created mainly for those who want to start first-principles calculations.
+Basic calculations such as DOS and band structure can be found.
+
 
 Prerequisite
 ------------
@@ -21,8 +25,8 @@ pip install pymatgen seekpath seekpath pyyaml
 > **NOTE:** If you don't have python on your computer, you need to install python. Anaconda is a useful installer of a set of different python libraries: https://www.anaconda.com/products/distribution.
 
 
-Installation of this repository
---------------------------------
+Installation of the examples
+-----------------------------
 
 ```
 git clone https://github.com/masato1122/Examples_QE.git
