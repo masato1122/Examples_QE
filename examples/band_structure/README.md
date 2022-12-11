@@ -271,15 +271,22 @@ python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 
 ### 4. Exercises
 
-#### 1. Calculate the total energy with different k-mesh densities.
+#### 1. Run a calculation with MPI.
+
+```
+$ mpirun -n 2 pw.x < scf.in | tee scf.out
+```
+Then, check the number of processors used for the calculation written in ``scf.out``.
+
+#### 2. Calculate the total energy with different k-mesh densities.
 
 Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
 
-#### 2. Calculate the total energy with different cutoff energy.
+#### 3. Calculate the total energy with different cutoff energy.
 
 Modify ``ecutwfc`` in scf.in file and run the SCF calculation.
 
-#### 3. Check the number of states below the Fermi level in DOS (see integrated DOS in Si.dos).
+#### 4. Check the number of states below the Fermi level in DOS (see integrated DOS in Si.dos).
 
 The number of electrons in a real system is $N_{el} N_{cell}$, 
 where 
@@ -287,13 +294,13 @@ $N_{el}$ is the number of electrons in the primitive cell (two for silicon), and
 $N_{cell}$ is the number of primitive cells in the system.
 These electrons are at the valence bands (below Fermi energy) in the ground state.
 
-#### 4. Count the number of states in the band structure below the Fermi level.
+#### 5. Count the number of states in the band structure below the Fermi level.
 
 You can find that the number of states below the Fermi level is same as 
 $N_{el} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
 the factor 2 denotes the number of spins. The spin is not considred in this calculation.
 
-#### 5. Estimate the band gap calculated and compare with experimental values
+#### 6. Estimate the band gap calculated and compare with experimental values
 
 A simple way may be estimate from ``Si.dos`` file. 
 The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` because
@@ -318,8 +325,9 @@ From these energies, VBM and CBM can be obtained.
     ...
 ```
 
-#### 6. Calculate other materials if you're interested.
+#### 7. Calculate other materials if you're interested.
 
 To analyze other materials, you need to prepare pseudopotential function files and
 the structure file for the material. Then, modify input scripts.
+
 
