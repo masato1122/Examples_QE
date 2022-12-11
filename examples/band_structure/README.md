@@ -8,8 +8,15 @@ While the following process can be run with shell scripts in ``shell``,
 please follow step by step if it's the first try.
 
 
-A few things before starting the analysis 
-------------------------------------------
+Check a few things before starting the analysis 
+------------------------------------------------
+
+### 0. Make sure you're in this example directory in your terminal
+
+```
+$ pwd
+(locate depending on your environment)/Examples_QE/examples/band_structure
+```
 
 ### 1. Check a pseudopotential functional file
 
