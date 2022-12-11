@@ -32,7 +32,7 @@ https://www.materialscloud.org/discover/sssp/table/efficiency.
 
 ### 2. Take a look at python scripts
 
-> While python scripts may be useful to generate input scripts, if you have troubles to use them, you can use input scripts for QE in ``./scripts`` without using the python scripts.
+> **NOTE:** While python scripts may be useful to generate input scripts, if you have troubles to use them, you can use input scripts for QE in ``./scripts`` without using the python scripts.
 
 Python scripts generating input scripts for QE are prepared in ``../tools``.
 
