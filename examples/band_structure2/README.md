@@ -228,5 +228,8 @@ These electrons are at the valence bands (below Fermi energy) in the ground stat
 ### 4. Count the number of states in the band structure below the Fermi level.
 
 You can find that the number of states below the Fermi level is same as 
-$N_{el} N_{k}$, where $N_{k}$ is the number of kpoints calculated.
+$N_{el} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
+the factor 2 denotes the number of spins. 
+If the spin is considered in the calculation, the factor 2 can be omitted.
+
 
