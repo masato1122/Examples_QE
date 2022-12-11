@@ -15,7 +15,7 @@ Check a few things before starting the analysis
 
 ```
 $ pwd
-(locate depending on your environment)/Examples_QE/examples/band_structure
+(location depending on your environment)/Examples_QE/examples/band_structure
 ```
 
 ### 1. Check a pseudopotential functional file
