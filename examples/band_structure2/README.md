@@ -207,7 +207,7 @@ or
 python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 ```
 
-### 4. Excercies
+### 4. Exercise
 
 #### 1. Calculate the total energy with different k-mesh densities.
 
@@ -231,4 +231,33 @@ You can find that the number of states below the Fermi level is same as
 $N_{el} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
 the factor 2 denotes the number of spins. The spin is not considred in this calculation.
 
+#### 5. Check the band gap
+
+A simple way may be estimate from ``Si.dos`` file. 
+The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` because
+the integrated DOS does not change in the band gap.
+
+Another more precise way is to read eigenvalues (energies) from ``nscf_dos.out``.
+You can find a part line below in ``nscf_dos.out`` 
+which shows calculated k-points and energies at these k-points.
+From these energies, VBM and CBM can be obtained.
+
+```
+    ...
+     End of band structure calculation
+
+          k = 0.0000 0.0000 0.0000 (  2109 PWs)   bands (ev):
+
+    -5.8725   5.9836   5.9836   5.9836   8.4765   8.4765   8.4765   9.0585
+
+          k = 0.1179-0.1179-0.1179 (  2151 PWs)   bands (ev):
+
+    -5.5163   3.5936   5.5346   5.5346   8.1930   9.1185   9.1185  11.2014
+    ...
+```
+
+#### 6. Calculate other materials if you're interested.
+
+To analyze other materials, you need to prepare pseudopotential function files and
+the structure file for the material. Then, modify input scripts.
 
