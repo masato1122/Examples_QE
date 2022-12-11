@@ -283,7 +283,7 @@ You can find that the number of states below the Fermi level is same as
 $N_{el} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
 the factor 2 denotes the number of spins. The spin is not considred in this calculation.
 
-#### 5. Check the band gap
+#### 5. Estimate the band gap calculated and compare with experimental values
 
 A simple way may be estimate from ``Si.dos`` file. 
 The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` because
