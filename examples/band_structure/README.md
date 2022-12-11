@@ -299,13 +299,10 @@ $N_{cell}$ is the number of primitive cells in the system,
 which is equal to the number of k-points, $N_{k}$.
 These $N_{el}^{prim} N_{cell}$ electrons are at the valence bands (below Fermi energy) in the ground state.
 
-> **NOTE:** Points in the band structure could be called *electron* at the valence bands under the ground state. *State* is more precise in general because electrons may not exist at corresponding states.
-
-
 #### 5. Count the number of states in the band structure below the Fermi level.
 
 You can find that the number of states below the Fermi level is same as 
-$N_{el} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
+$N_{el}^{prim} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
 the factor 2 denotes the number of spins. The spin is not considred in this calculation.
 
 #### 6. Estimate the band gap calculated and compare with experimental values
