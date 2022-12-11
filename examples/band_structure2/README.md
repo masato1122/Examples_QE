@@ -217,13 +217,13 @@ Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
 
 Modify ``ecutwfc`` in scf.in file and run the SCF calculation.
 
-#### 3. Calculate the number of states in DOS below the Fermi energy.
+#### 3. Check the number of states below the Fermi level in DOS (see integrated DOS in Si.dos).
 
-The number of states below the Fermi energy, namely in the valence bands, should be
-the same as $2 N_{el} N_{k}$, 
+The number of electrons in a real system is $N_{el} N_{cell}$, 
 where 
-the factor 2 denotes the number of spins,
 $N_{el}$ is the number of electrons in the primitive cell, and
-$N_{k}$ is the number of k-points calculated.
+$N_{cell}$ is the number of primitive cells in the system.
+These electrons are at the valence bands (below Fermi energy) in the ground state.
+
 
 
