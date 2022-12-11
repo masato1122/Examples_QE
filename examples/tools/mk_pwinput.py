@@ -74,7 +74,7 @@ if __name__ == '__main__':
     
     parser.add_option("--ecutwfc", dest="ecutwfc", type="float",
                       default=60.0, 
-                      help="kinetic energy cutoff for wavefunctions"\
+                      help="kinetic energy cutoff for wavefunctions "\
                               "with the unit of Ry [60.0]")
     
     parser.add_option("--frac_ecutrho", dest="frac_ecutrho", type="float",
