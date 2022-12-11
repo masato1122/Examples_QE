@@ -27,7 +27,7 @@ README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 
 A UPF (unified pseudopotential functional) file used in this example can be found in ``../pseudo`` directory.
 
-> If you want, you can download UPF files of other elements from 
+> When you calculate other materials, you need to download UPF files of other elements from 
 https://www.materialscloud.org/discover/sssp/table/efficiency.
 
 ### 2. Take a look at python scripts
@@ -36,7 +36,7 @@ Python scripts generating input scripts for QE are prepared in ``../tools``.
 
 ```
 $ ls ../tools
-mk_pwinput.py   pw_keys.py
+inout         mk_pwinput.py mpl           plot_band.py  plot_dos.py   plot_pdos.py
 ```
 
 ``mk_pwinput.py`` is used to make input scripts of QE. 
