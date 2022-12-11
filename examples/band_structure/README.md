@@ -95,7 +95,11 @@ python ../tools/mk_pwinput.py \
     --property scf \
     --reciprocal_density 20 
 ```
-If you have an error, you can use the file in ``./scripts``: ``cp ./scripts/scf.in ./``.
+If you have an error, you can use a file in ``./scripts``: 
+
+```
+cp ./scripts/scf.in ./
+```
 
 Make sure that ``scf.in`` is generated properly:
 
