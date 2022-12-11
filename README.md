@@ -9,7 +9,8 @@ Basic calculations such as DOS and band structure can be found.
 Prerequisite
 ------------
 
-To use python scripts prepared, the following libralies need to be installed in advance.
+To use python scripts prepared, the following libralies need to be installed in advance 
+while the python scripts are not absolutely necessary.
 
 * python
 * pymatgen
