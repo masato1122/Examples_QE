@@ -295,7 +295,7 @@ where
 $N_{el}$ is the number of electrons in the primitive cell (two for silicon), and
 $N_{cell}$ is the number of primitive cells in the system, 
 which is equal to the number of k-points $N_{k}$.
-The electrons are at the valence bands (below Fermi energy) in the ground state.
+These $N_{el} N_{cell}$ electrons are at the valence bands (below Fermi energy) in the ground state.
 
 > **NOTE:** Points in the band structure could be called *electron* at the valence bands under the ground state. *State* is more precise in general because electrons may not exist at corresponding states.
 
