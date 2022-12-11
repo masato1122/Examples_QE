@@ -98,7 +98,7 @@ python ../tools/mk_pwinput.py \
 If you have an error, you can use a file in ``./scripts``: 
 
 ```
-cp ./scripts/scf.in ./
+$ cp ./scripts/scf.in ./
 ```
 
 Make sure that ``scf.in`` is generated properly:
