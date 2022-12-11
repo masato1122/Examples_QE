@@ -254,13 +254,13 @@ Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generate
 Calculate the band structure:
 
 ```
-bands.x < bands.in | tee bands.out
+$ bands.x < bands.in | tee bands.out
 ```
 
 Plot the calculated band structure:
 
 ```
-plotband.x < plotband.in
+$ plotband.x < plotband.in
 ```
 
 or
