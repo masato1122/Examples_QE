@@ -2,7 +2,7 @@
 
 Example jobs for QuantumEspresso. 
 
-Examples found here were created mainly for those who want to start first-principles calculations.
+Examples found here were created mainly for those who want to learn first-principles calculations.
 Basic calculations such as DOS and band structure can be found.
 
 
