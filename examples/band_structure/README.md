@@ -3,8 +3,8 @@ Calculation of band structure with QuantumEspresso (QE)
 
 You can learn how to calculate electronic states such as band structure and density of states (DOS) 
 with QuantumEspresso (QE) following the process described below.
-Final results can be found in ``results``.
-While the following process can be run with shell scripts in ``shell``, 
+Final results can be found in ``./results``.
+While the following process can be run with shell scripts in ``./shell``, 
 please follow step by step if it's the first try.
 
 
