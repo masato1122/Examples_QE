@@ -292,7 +292,7 @@ Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
 
 The number of electrons in a real system is $N_{el}^{tot} = N_{el}^{prim} N_{cell}$, 
 where 
-$N_{el}^{prim}$ is the number of electrons in the primitive cell ($N_{el}^{prim} = 8$ for silicon), and
+$N_{el}^{prim}$ is the number of electrons in the primitive cell ($N_{el}$ for silicon), and
 $N_{cell}$ is the number of primitive cells in the system, 
 which is equal to the number of k-points $N_{k}$.
 These $N_{el}^{prim} N_{cell}$ electrons are at the valence bands (below Fermi energy) in the ground state.
