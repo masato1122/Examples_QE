@@ -39,9 +39,11 @@ $ ls ../tools
 inout         mk_pwinput.py mpl           plot_band.py  plot_dos.py   plot_pdos.py
 ```
 
-``mk_pwinput.py`` is used to make input scripts of QE. 
-(Users don't need to use ``pw_keys.py`` which is called from ``mk_pwinput.py``.)
-The options of the code can be checked with "-h" option.
+``mk_pwinput.py`` is used to make input scripts of QE and
+``plot_***.py`` is used to plot corresponding results.
+(You don't need to care files in ``inout`` and ``mpl`` so much. They are called from 
+``mk_pwinput.py`` or ``plot_***.py``.)
+The options of ``mk_pwinput.py`` can be checked with "-h" option.
 
 ```
 $ python ../tools/mk_pwinput.py -h
