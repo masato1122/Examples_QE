@@ -2,159 +2,7 @@
 import numpy as np
 from optparse import OptionParser
 from pymatgen.core.structure import Structure
-from pymatgen.io.pwscf import PWInput
-from pymatgen.io.vasp.inputs import Kpoints
-from pymatgen.symmetry.kpath import KPathSeek
-
-def generate_kmesh_density(structure, reciprocal_density=20):
-    """ Generate and return kmesh density based on the density in the 
-    reciprocal space.
-    
-    Args
-    ----
-    structure : Pymatgen Structure obj
-        crystal structure
-
-    reciprocal_density : int
-        number of grids
-    
-    """
-    vol = structure.lattice.reciprocal_lattice.volume
-    kppa = reciprocal_density * vol * structure.num_sites
-    kpoints = Kpoints.automatic_density(structure, kppa)
-    kpts = kpoints.kpts[0]
-    kpts_shift = kpoints.kpts_shift 
-    if 'monkhorst' in kpoints.style.name.lower():
-        style = 'automatic'
-    else:
-        style = 'gamma'
-    return kpts, kpts_shift, style
-
-def get_kpath(structure, delta_k=0.02):
-    """ Generate and return kpoint path for band structure
-    Args
-    ----
-    structure : Pymatgen Structure obj
-        primitive cell
-
-    delta_k : float
-    """
-    kpath = KPathSeek(structure).kpath
-    kpoints = kpath['kpoints']
-    path = kpath['path']
-    
-    count = 0
-    klist = []
-    klengths = []
-    kpre = None
-    klist.append("")
-    for kline in path:
-        for kp in kline:
-            klist.append(" %12.8f" * 3 % tuple(kpoints[kp]))
-            
-            ### calculate number of k-points between two symmetric points
-            if count == 0:
-                nk = 30
-            else:
-                kl = np.linalg.norm(np.asarray(kpoints[kp]) - kpre)
-                nk = int(kl / delta_k + 0.5)
-            
-            klist[-1] += "  %d\n" % (nk)
-            
-            count += 1
-            kpre = np.asarray(kpoints[kp])
-    
-    ###
-
-
-    klist[0] = "%d\n" % count
-    return klist
-
-def genereate_pwinputs(dict_options):
-    """ 
-    Args
-    -----
-    dict_options : dict
-    """
-    ### generate pwinput_dict
-    keys_set = list(dict_options.keys())
-    pwinput_dict = {}
-    from pw_keys import pw_keys
-    for sec in pw_keys:
-        for name in pw_keys[sec]:
-            if name in keys_set:
-                if sec not in pwinput_dict:
-                    pwinput_dict[sec] = {}
-                pwinput_dict[sec][name] = dict_options[name]
-    ##
-    return pwinput_dict
-
-def write_additional_file(propt, info):
-    
-    import f90nml
-    
-    indata = {}
-    if propt == 'dos':
-        key = propt
-        indata[key] = {}
-        indata[key]['outdir'] = info['outdir']
-        indata[key]['prefix'] = info['prefix']
-        file_dos = info['prefix'] + '.dos'
-        indata[key]['fildos'] = file_dos
-    elif propt == 'pdos':
-        key = 'projwfc'
-        indata[key] = {}
-        indata[key]['outdir'] = info['outdir']
-        indata[key]['prefix'] = info['prefix']
-        indata[key]['degauss'] = 0.01
-    elif propt == 'bands':
-        key = 'bands'
-        indata[key] = {}
-        indata[key]['outdir'] = info['outdir']
-        indata[key]['prefix'] = info['prefix']
-        file_band = info['prefix'] + '.band'
-        indata[key]['filband'] = file_band
-        indata[key]['lsym'] = True
-    else:
-        pass
-    
-    if len(indata) > 0: 
-        outfile = propt + '.in'
-        with open(outfile, 'w') as f:
-            f90nml.write(indata, f)
-            print(" Output", outfile)
-    
-    ###
-    if propt == 'plotband':
-        
-        lines = []
-        file_band = info['prefix'] + '.band'
-        file_xmgr = info['prefix'] + '.band.xmgr'
-        file_ps = info['prefix'] + '.band.ps'
-        file_dos = info['prefix'] + '.dos'
-        
-        ##
-        try:
-            with open(file_dos) as f:
-                lines_dos = f.readlines()
-                data = lines_dos[0].split()
-                efermi = float(data[-2])
-        except Exception:
-            efermi = 0.
-            print(" WARRNING: fermi energy cannot be found in %s." % (
-                file_dos))
-        
-        lines.append(file_band)
-        lines.append("0 14")
-        lines.append(file_xmgr)
-        lines.append(file_ps)
-        lines.append("%f" % efermi)
-        lines.append("1 %f" % efermi)
-        
-        outfile = "plotband.in"
-        with open(outfile, 'w') as f:
-            f.write("\n".join(lines))
-            print(" Output", outfile)
+from inout.espresso import generate_pwinput, write_additional_file
 
 def main(options):
     
@@ -164,48 +12,24 @@ def main(options):
     ### conver to a dictionary
     dict_options = eval(str(options))
     
-    ### structure
-    ### read the crystal structure from the structure file and obtain the
-    ### primitive structure
+    ### Read the give structure file and get the primitive cell
     struct_tmp = Structure.from_file(options.filename)
     structure = struct_tmp.get_primitive_structure()
-    dict_options['prefix'] = structure.composition.reduced_formula
     
-    ### calculation
+    ### add prefix to the dictionary
+    prefix = structure.composition.reduced_formula
+    dict_options['prefix'] = prefix
+    
+    ### get the analyzed property
     propt = options.property.lower()
-    if propt == 'scf':
-        calc = 'scf'
-    elif propt == 'dos':
-        calc = 'nscf'
-        dict_options['occupation'] = 'tetrahedra'
-    elif propt == 'bands':
-        calc = 'bands'
-        dict_options['occupation'] = 'fixed'
-    else:
-        print(" Error: %s is not supported." % propt)
-        exit()
     
-    ### kmesh density
-    if propt == 'bands':
-        style = 'crystal_b'
-        kpts = get_kpath(structure)
-        kpts_shift = []
-    else:
-        kpts, kpts_shift, style = generate_kmesh_density(
-                structure, reciprocal_density=options.reciprocal_density
-                )
-    
-    ### input parameters for pw.x (or pw.exe)
-    pwinput_dict = genereate_pwinputs(dict_options)
-    
-    pwinput = PWInput(
-            structure, pseudo=pseudo,
-            control=pwinput_dict['control'],
-            system=pwinput_dict['system'],
-            electrons=pwinput_dict['electrons'],
-            kpoints_mode=style,
-            kpoints_grid=kpts,
-            kpoints_shift=kpts_shift,
+    ### generate an object which contains parameters for pw.x (or pw.exe)
+    pwinput = generate_pwinput(
+            structure, 
+            dict_options, 
+            propt=propt, 
+            pseudo=pseudo,
+            reciprocal_density=options.reciprocal_density
             )
     
     ### output files
@@ -219,7 +43,7 @@ def main(options):
             write_additional_file('pdos', dict_options)
         if propt == 'bands':
             write_additional_file('plotband', dict_options)
-
+    
     pwinput.write_file(outfile)
     print(" Output", outfile)
     
@@ -242,7 +66,7 @@ if __name__ == '__main__':
     
     parser.add_option("--pseudo_dir", dest="pseudo_dir", type="string",
                       default="../pseudo", 
-                      help="directory of peudofunctions [../pseudo]")
+                      help="directory of peudofunctional files [../pseudo]")
     
     parser.add_option("--outdir", dest="outdir", type="string",
                       default="./out", 
