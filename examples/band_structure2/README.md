@@ -5,7 +5,7 @@ You can learn how to calculate electronic states such as band structure and dens
 with QuantumEspresso (QE) following the process described below.
 Final results can be found in ``results``.
 While the following process can be run with shell scripts in ``shell``, 
-please follow step by step if it is the first try.
+please follow step by step if it's the first try.
 
 
 A few things before starting the analysis 
