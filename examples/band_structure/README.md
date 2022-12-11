@@ -311,7 +311,7 @@ A simple way may be estimate from ``Si.dos`` file.
 The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` 
 around the energy range near the Fermi level where the integrated DOS does not change.
 
-    Another more precise way is to read eigenvalues (energies) from ``nscf_dos.out``.
+Another more precise way is to read eigenvalues (energies) from ``nscf_dos.out``.
 You can find an output shown below in ``nscf_dos.out`` 
 which shows calculated k-points and energies at these k-points.
 From these energies, VBM and CBM can be estimated.
