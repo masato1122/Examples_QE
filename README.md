@@ -33,6 +33,6 @@ Band structure
 
 ``./examples/band_structure`` contains an example to calculate the electron band structure of silicon.
 
-Move to this directory in your terminal with `cd ./Examples_QE/examples/band_structure` and
+Move to this directory in your terminal with ``cd ./Examples_QE/examples/band_structure`` and
 follow the description written in 
 https://github.com/masato1122/Examples_QE/tree/main/examples/band_structure.
