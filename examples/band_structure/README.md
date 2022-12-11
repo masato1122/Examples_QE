@@ -226,6 +226,13 @@ $ projwfc.x < pdos.in | tee pdos.out
 
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
 
+Plot DOS and PDOS. 
+If you can use the prepared python scripts, type the following commands:
+
+```
+python ../tools/plot_dos.py -f Si.dos
+python ../tools/plot_pdos.py
+```
 
 ### 3. Band structure
 
