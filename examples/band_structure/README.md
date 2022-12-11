@@ -303,7 +303,7 @@ These $N_{el}^{prim} N_{cell}$ electrons are at the valence bands (below Fermi e
 
 You can find that the number of states below the Fermi level is same as 
 $N_{el}^{prim} N_{k} / 2$, where $N_{k}$ is the number of kpoints calculated and
-the factor 2 denotes the number of spins. The spin is not considred in this calculation.
+the factor 2 denotes the number of spins. Note that the spin is not considred in this calculation.
 
 #### 6. Estimate the band gap calculated and compare with experimental values
 
