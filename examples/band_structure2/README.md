@@ -209,7 +209,7 @@ python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 
 ### 4. Excercies
 
-1. Calculate the total energy with different k-mesh densities.
+#### 1. Calculate the total energy with different k-mesh densities.
 
 Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
 
