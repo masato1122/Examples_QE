@@ -40,7 +40,7 @@ inout         mk_pwinput.py mpl           plot_band.py  plot_dos.py   plot_pdos.
 ```
 
 ``mk_pwinput.py`` is used to make input scripts of QE and
-``plot_***.py`` is used to plot corresponding results.
+``plot_{band/dos/pdos}.py`` is used to plot corresponding results.
 (You don't need to care files in ``inout`` and ``mpl`` so much. They are called from 
 ``mk_pwinput.py`` or ``plot_***.py``.)
 The options of ``mk_pwinput.py`` can be checked with "-h" option.
