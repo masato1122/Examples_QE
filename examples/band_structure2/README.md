@@ -225,5 +225,8 @@ $N_{el}$ is the number of electrons in the primitive cell, and
 $N_{cell}$ is the number of primitive cells in the system.
 These electrons are at the valence bands (below Fermi energy) in the ground state.
 
+### 4. Count the number of states in the band structure below the Fermi level.
 
+You can find that the number of states below the Fermi level is same as 
+$N_{el} N_{k}$, where $N_{k}$ is the number of kpoints calculated.
 
