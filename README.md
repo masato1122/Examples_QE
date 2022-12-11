@@ -21,8 +21,8 @@ pip install pymatgen seekpath seekpath pyyaml
 > **NOTE:** If you don't have python on your computer, you need to install python. Anaconda is a useful installer of a set of different python libraries: https://www.anaconda.com/products/distribution.
 
 
-Installation of these examples
-------------------------------
+Installation of this repository
+--------------------------------
 
 ```
 git clone https://github.com/masato1122/Examples_QE.git
