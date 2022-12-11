@@ -273,18 +273,20 @@ python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 
 #### 1. Run a calculation with MPI.
 
+> If you don't have ``mpirun`` command, you can skip this part.
+
 ```
 $ mpirun -n 2 pw.x < scf.in | tee scf.out
 ```
 Then, check the number of processors used for the calculation written in ``scf.out``.
 
-#### 2. Calculate the total energy with different k-mesh densities.
+#### 2. Calculate the total energy with different cutoff energies.
+
+Modify ``ecutwfc`` and ``ecutrho`` in ``scf.in`` and run the SCF calculation.
+
+#### 3. Calculate the total energy with different k-mesh densities.
 
 Modify ``K_POINTS`` in scf.in file and run the SCF calculation.
-
-#### 3. Calculate the total energy with different cutoff energy.
-
-Modify ``ecutwfc`` in scf.in file and run the SCF calculation.
 
 #### 4. Check the number of states below the Fermi level in DOS (see integrated DOS in Si.dos).
 
@@ -293,6 +295,9 @@ where
 $N_{el}$ is the number of electrons in the primitive cell (two for silicon), and
 $N_{cell}$ is the number of primitive cells in the system.
 These electrons are at the valence bands (below Fermi energy) in the ground state.
+
+> **NOTE:** You can say *electron*
+
 
 #### 5. Count the number of states in the band structure below the Fermi level.
 
@@ -303,13 +308,13 @@ the factor 2 denotes the number of spins. The spin is not considred in this calc
 #### 6. Estimate the band gap calculated and compare with experimental values
 
 A simple way may be estimate from ``Si.dos`` file. 
-The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` because
-the integrated DOS does not change in the band gap.
+The valence band maximum (VBM) and conduction band minimum (CBM) can be obtained from ``Si.dos`` 
+around the energy range near the Fermi level where the integrated DOS does not change.
 
 Another more precise way is to read eigenvalues (energies) from ``nscf_dos.out``.
-You can find a part line below in ``nscf_dos.out`` 
+You can find an output shown below in ``nscf_dos.out`` 
 which shows calculated k-points and energies at these k-points.
-From these energies, VBM and CBM can be obtained.
+From these energies, VBM and CBM can be estimated.
 
 ```
     ...
