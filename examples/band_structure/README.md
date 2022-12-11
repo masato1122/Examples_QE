@@ -127,6 +127,9 @@ b) To output in a file only:
 $ pw.x < scf.in > scf.out
 ```
 
+> **MEMO:** If you don't set a path for QE commands, use the absolute path instead of ``pw.x``. 
+
+
 Make sure that ``./out`` directory was generated after the calculation.
 
 ```
