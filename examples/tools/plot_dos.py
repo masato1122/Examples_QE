@@ -77,5 +77,5 @@ if __name__ == '__main__':
                       default="./Si.dos", 
                       help=".dos file name [Si.dos]")
     (options, args) = parser.parse_args()
-    #file_check(options.filename)
     main(options)
+
