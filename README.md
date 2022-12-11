@@ -40,3 +40,9 @@ Move to this directory in your terminal with ``cd ./Examples_QE/examples/band_st
 follow the description written in 
 https://github.com/masato1122/Examples_QE/tree/main/examples/band_structure.
 
+
+Phonon dispersion
+------------------
+
+will be uploaded...
+
