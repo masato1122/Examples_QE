@@ -139,6 +139,8 @@ CELL_PARAMETERS angstrom
   0.000000 -2.734364 -2.734364
 ```
 
+> To escape from ``less`` command, type ``q``.
+
 The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
 
 a) To print the result in the terminal and output in a file (``scf.out``) at the same time:
