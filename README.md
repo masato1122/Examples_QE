@@ -11,7 +11,8 @@ To use python scripts prepared, the following libralies need to be installed in 
 * seekpath
 * pyyaml
 
-These python libralies can be installed with
+These python libralies can be installed with the following command.
+If you have troubles, you can skip this part.
 
 ```
 pip install pymatgen seekpath seekpath pyyaml
@@ -27,7 +28,7 @@ git clone https://github.com/masato1122/Examples_QE.git
 If you don't have ``git`` command, download zip file and unzip under the directory you like.
 
 
-Band Structure
+Band structure
 ---------------
 
 ``./examples/band_structure`` contains an example to calculate the electron band structure of silicon.
