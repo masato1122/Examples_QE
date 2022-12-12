@@ -103,7 +103,7 @@ $ cp ./scripts/scf.in ./
 
 Make sure that ``scf.in`` is generated properly:
 
-> **MEMO:** In ``less`` command, to go forward/backward, type ``f``/``b`` and to escape from ``less`` command, type ``q``.
+> **MEMO:** In ``less`` command, to go forward/backward, type ``f``/``b``, and to escape from ``less`` command, type ``q``.
 
 ```
 $ less scf.in
