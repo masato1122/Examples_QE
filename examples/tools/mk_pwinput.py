@@ -38,14 +38,14 @@ def main(options):
     else:
         outfile = 'nscf_' + options.property + ".in"
         
-        write_additional_file(propt, dict_options)
-        if propt == 'dos':
-            write_additional_file('pdos', dict_options)
-        if propt == 'bands':
-            write_additional_file('plotband', dict_options)
-    
     pwinput.write_file(outfile)
     print(" Output", outfile)
+    
+    write_additional_file(propt, dict_options)
+    if propt == 'dos':
+        write_additional_file('pdos', dict_options)
+    if propt == 'bands':
+        write_additional_file('plotband', dict_options)
     
 
 if __name__ == '__main__':

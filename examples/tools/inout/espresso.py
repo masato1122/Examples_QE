@@ -209,7 +209,25 @@ def write_additional_file(propt, info):
             print(" Output", outfile)
 
     ###
-    if propt == 'plotband':
+    if propt == 'scf':
+        nml = {}
+        nml['inputpp'] = {}
+        nml['inputpp']['outdir'] = info['outdir']
+        nml['inputpp']['prefix'] = info['prefix']
+        nml['inputpp']['plot_num'] = 0
+        nml['plot'] = {}
+        nml['plot']['iflag'] = 3
+        nml['plot']['output_format'] = 6
+        nml['plot']['fileout'] = info['prefix'] + "_rho.cube"
+        nml['plot']['nx'] = 64
+        nml['plot']['ny'] = 64
+        nml['plot']['nz'] = 64
+        outfile = 'pp.in'
+        with open(outfile, 'w') as f:
+            f90nml.write(nml, f)
+            print(" Output", outfile)
+    
+    elif propt == 'plotband':
 
         lines = []
         file_band = info['prefix'] + '.band'

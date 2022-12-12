@@ -10,3 +10,6 @@ python ../tools/mk_pwinput.py \
 ### perform a SCF calculation to obtain charge distribution
 pw.x < scf.in | tee scf.out
 
+### calculate charge density
+pp.x < pp.in | tee pp.out
+
