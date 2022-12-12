@@ -95,6 +95,7 @@ python ../tools/mk_pwinput.py \
     --property scf \
     --reciprocal_density 20 
 ```
+Make sure that ``scf.in`` and ``pp.in`` were generated.
 If you have an error, you can use a file in ``./scripts``: 
 
 ```
@@ -171,8 +172,20 @@ wfc1.dat                         wfc5.dat
 
 Wavefunctions (wfc\*.dat) obtained with the SCF calculation were saved in ``./out/Si.save``.
 
+### 2. Charge density
 
-### 2. DOS with non self-consistent field (NSCF) calculation
+Calcualte charge density with wavefunctions obtained with the SCF calculation.
+
+```
+pp.x < pp.in | tee pp.out
+```
+Make sure that ``Si_rho.cube`` was generated.
+
+To visualize the charge density, you need a visualizer such as [VESTA](https://jp-minerals.org/vesta/en/).
+``Si_rho.cube`` can be visualized with VESTA.
+
+
+### 3. DOS with non self-consistent field (NSCF) calculation
 
 Once wavefunctions, namely charge density, are obtained,
 electronic states such as density of states (DOS) and band structure
@@ -237,7 +250,7 @@ python ../tools/plot_dos.py -f Si.dos
 python ../tools/plot_pdos.py
 ```
 
-### 3. Band structure
+### 4. Band structure
 
 Prepare input scripts for band calculation:
 
@@ -269,7 +282,7 @@ or
 python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 ```
 
-### 4. Quiz
+### 5. Quiz
 
 #### 1. Run a calculation with MPI.
 
