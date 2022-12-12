@@ -27,8 +27,7 @@ README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 
 A UPF (unified pseudopotential functional) file used in this example can be found in ``../pseudo`` directory.
 
-> When you calculate other materials, you need to download UPF files of other elements from 
-https://www.materialscloud.org/discover/sssp/table/efficiency.
+> When you calculate other materials, you need to download UPF files of other elements from [the formal website](https://www.materialscloud.org/discover/sssp/table/efficiency).
 
 ### 2. Take a look at python scripts
 
@@ -75,8 +74,7 @@ For example, a structure file can be given with "-f" or "--filename" option.
 $ python ../tools/mk_pwinput.py -f ../Si.cif
 ```
 
-> If you want to know details of input parameters of pw.x of QE, see 
-https://www.quantum-espresso.org/Doc/INPUT_PW.html.
+> If you want to know details of input parameters of pw.x of QE, see [HERE](https://www.quantum-espresso.org/Doc/INPUT_PW.html).
 
 
 Calcualtion process
@@ -269,7 +267,7 @@ or
 python ../tools/plot_band.py --filename Si.band.gnu --nelectrons 8
 ```
 
-### 4. Exercises
+### 4. Quiz
 
 #### 1. Run a calculation with MPI.
 

@@ -1,10 +1,9 @@
 # Examples_QE
 
-Example jobs for QuantumEspresso. 
+Example jobs for QuantumEspresso can be found in a [GitHub repository](https://github.com/masato1122/Examples_QE).
 
-Examples found here were created mainly for those who want to learn first-principles calculations.
-Basic calculations such as DOS and band structure can be found.
-
+Examples in the above repository were created mainly for those who want to learn first-principles calculations.
+Basic calculations such as DOS and band structure can be practiced.
 
 Prerequisite
 ------------
