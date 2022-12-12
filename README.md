@@ -9,7 +9,7 @@ Prerequisite
 ------------
 
 To use python scripts prepared, the following libralies need to be installed in advance 
-while the python scripts are not absolutely necessary.
+while the python scripts are not absolutely necessary to run QE jobs.
 
 * python
 * pymatgen
@@ -27,8 +27,8 @@ pip install pymatgen --upgrade
 > **NOTE:** If you don't have python on your computer, you need to install python. Anaconda is a useful installer of a set of different python libraries: https://www.anaconda.com/products/distribution.
 
 
-Installation of the examples
------------------------------
+Download of this repository
+----------------------------
 
 ```
 git clone https://github.com/masato1122/Examples_QE.git

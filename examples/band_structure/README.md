@@ -29,7 +29,7 @@ README.md    Si.pbesol-n-rrkjus_psl.1.0.0.UPF
 
 A UPF (unified pseudopotential functional) file used in this example can be found in ``../pseudo`` directory.
 
-> When you calculate other materials, you need to download UPF files of other elements from [the formal website](https://www.materialscloud.org/discover/sssp/table/efficiency).
+> When you calculate other materials, you need to download UPF files of other elements from [the official website](https://www.materialscloud.org/discover/sssp/table/efficiency).
 
 ### 2. Take a look at python scripts
 
