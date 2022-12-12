@@ -103,6 +103,8 @@ $ cp ./scripts/scf.in ./
 
 Make sure that ``scf.in`` is generated properly:
 
+> **MEMO:** In ``less`` command, to go forward/backward, type ``f``/``b`` and to escape from ``less`` command, type ``q``.
+
 ```
 $ less scf.in
 &CONTROL
@@ -138,9 +140,6 @@ CELL_PARAMETERS angstrom
   -2.734364 0.000000 -2.734364
   0.000000 -2.734364 -2.734364
 ```
-
-> **MEMO:** To go forward/backward, type ``f``/``b`` and to escape from ``less`` command, type ``q``.
-
 
 The SCF calculation can be conducted with ``pw.x`` (``pw.exe`` for Windows).
 
@@ -229,8 +228,9 @@ $ projwfc.x < pdos.in | tee pdos.out
 
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
 
-Plot DOS and PDOS. 
-If you can use the prepared python scripts, type the following commands:
+Plot DOS (``Si.dos``) and PDOS (``Si.pdos_atm***_wfc***``). 
+If python is available, figures can be generated with commands below.
+If not, you can plot with any software such as Excel.
 
 ```
 python ../tools/plot_dos.py -f Si.dos
@@ -257,7 +257,7 @@ Calculate the band structure:
 $ bands.x < bands.in | tee bands.out
 ```
 
-Plot the calculated band structure:
+Plot the band structure calculated (``Si.band.gnu``) with python scripts, Excel, or any other methods:
 
 ```
 $ plotband.x < plotband.in
