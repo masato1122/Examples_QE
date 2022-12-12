@@ -32,7 +32,7 @@ def generate_pwinput(structure, parameters,
         style = 'crystal_b'
         kpts = get_kpath(structure)
         kpts_shift = []
-        
+    
     else:
         kpts, kpts_shift, style = generate_kmesh_density(
                 structure, reciprocal_density=reciprocal_density
@@ -290,16 +290,17 @@ def get_kpath(structure, delta_k=0.02):
         for kp in kline:
             print(" %10.5f" * 3 % tuple(kpoints[kp]), " ", kp)
     print("")
-
+    
     count = 0
     klist = []
     klengths = []
     kpre = None
-    klist.append("")
     for kline in path:
         for ik, kp in enumerate(kline):
 
-            klist.append(" %12.8f" * 3 % tuple(kpoints[kp]))
+            #klist.append(" %12.8f" * 3 % tuple(kpoints[kp]))
+            klist.append(list(kpoints[kp]))
+            
             ### calculate number of k-points between two symmetric points
             if ik < len(kline) - 1:
                 knext = np.asarray(kpoints[kline[ik+1]])
@@ -308,10 +309,11 @@ def get_kpath(structure, delta_k=0.02):
             else:
                 nk = 20
             
-            klist[-1] += "  %d  ! %s\n" % (nk, kp)
+            #klist[-1].append("  %d  ! %s" % (nk, kp))
+            klist[-1].append(nk)
             count += 1
     ###
-    klist[0] = "%d\n" % count
+    #klist[0] = "%d\n" % count
     return klist
 
 

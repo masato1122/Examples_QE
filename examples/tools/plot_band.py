@@ -7,8 +7,74 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl.initialize import (set_matplot, set_axis, set_legend)
 
-def plot_band(bands, nelectrons=None, figname='fig_band.png', 
-        dpi=300, fontsize=7, fig_width=2.8, aspect=0.6, lw=0.5, ms=0.5):
+def _add_lines_for_symmetric_points(
+        ax, kpoints, filename="nscf_bands.in", symmetry_names=None
+        ):
+    """
+    Args
+    ----
+    """
+    lines = open(filename, 'r').readlines()
+    for il, line in enumerate(lines):
+        data = line.split()
+        if len(data) == 0:
+            continue
+        if "K_POINT" in line:
+            ik_init = il
+    
+    ### parse K_POINT section in "filename"
+    nk_div = int(lines[ik_init+1].split()[0])
+    ik0 = ik_init + 2
+    ik1 = ik_init + 2 + nk_div - 1
+    nk_each = []
+    idx_div = []
+    idx_div.append(0)
+    nk_sum = 0
+    for il in range(ik0, ik1):
+        data = lines[il].split()
+        nk = int(float(data[-1]))
+        nk_each.append(nk)
+        nk_sum += nk
+        if il < ik1:
+            idx_div.append(nk_sum)
+        else:
+            idx_div.append(nk_sum - 1)
+    
+    ### add vertical lines
+    for ii in idx_div:
+        xsym = kpoints[ii]
+        ax.axvline(xsym, lw=0.3, c='black', linestyle='-')
+    
+    ### add new ticks
+    flag_new = False
+    if symmetry_names is not None:
+        xticks = kpoints[idx_div]
+        labels = symmetry_names.split(":")
+        ##
+        labels_mod = []
+        for ll in labels:
+            if ll[0] == "G":
+                labels_mod.append("${\\rm \\Gamma}$")
+            else:
+                labels_mod.append(ll)
+        ##
+        if len(xticks) == len(labels_mod):
+            flag_new = True
+            ax.set_xticks(xticks)
+            ax.set_xticklabels(labels_mod)
+    
+    #### delete original ticks
+    if flag_new == False:
+        ax.tick_params(
+                labelbottom=False, bottom=False,
+                labeltop=False, top=False, which='both'
+                )
+    
+def plot_band(
+        bands, nelectrons=None, figname='fig_band.png', 
+        symmetry_names=None,
+        dpi=300, fontsize=7, fig_width=2.8, aspect=0.6, lw=0.5, ms=0.5
+        ):
     
     set_matplot(fontsize=fontsize)
     fig = plt.figure(figsize=(fig_width, aspect*fig_width))
@@ -42,8 +108,17 @@ def plot_band(bands, nelectrons=None, figname='fig_band.png',
         ene_mid = (ene_vbm + ene_cbm) * 0.5
         ax.axhline(ene_mid, lw=0.3, c='grey', linestyle='-')
     
-    
     set_axis(ax)
+    
+    ### add vertical lines
+    try:
+        kpoints = bands[0][:,0]
+        _add_lines_for_symmetric_points(
+                ax, kpoints, filename="nscf_bands.in",
+                symmetry_names=symmetry_names
+                )
+    except Exception:
+        pass
     
     fig.savefig(figname, dpi=dpi, bbox_inches='tight')
     print(" Output", figname)
@@ -73,9 +148,11 @@ def read_band_gnu(filename):
 def main(options):
     
     bands = read_band_gnu(options.filename)
-    
-    plot_band(bands, nelectrons=options.nelectrons)
-    
+
+    plot_band(
+            bands, nelectrons=options.nelectrons,
+            symmetry_names=options.symmetry_names  
+            )
     
 if __name__ == '__main__':
     parser = OptionParser()
@@ -85,6 +162,11 @@ if __name__ == '__main__':
     
     parser.add_option("-n", "--nelectrons", dest="nelectrons", type="int",
                       default=8,
+                      help="number of electrons [8]")
+    
+    parser.add_option("--symmetry_names", dest="symmetry_names", 
+                      type="string",
+                      default="G:X:U:K:G:L:W:X",
                       help="number of electrons [8]")
     
     (options, args) = parser.parse_args()

@@ -14,5 +14,8 @@ bands.x < bands.in | tee bands.out
 
 ## plot band structure
 plotband.x < plotband.in
-python ../tools/plot_band.py -f Si.band.gnu -n 8
+
+python ../tools/plot_band.py \
+    -f Si.band.gnu -n 8 \
+    --symmetry_names "G:X:U:K:G:L:W:X"
 
