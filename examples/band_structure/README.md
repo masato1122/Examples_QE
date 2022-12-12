@@ -1,6 +1,8 @@
 Calculation of band structure with QuantumEspresso (QE)
 ========================================================
 
+This example can be found [HERE](https://github.com/masato1122/Examples_QE/tree/main/examples/band_structure).
+
 You can learn how to calculate electronic states such as band structure and density of states (DOS) 
 with QuantumEspresso (QE) following the process described below.
 Final results can be found in ``./results``.
