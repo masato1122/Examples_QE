@@ -208,7 +208,7 @@ is larger than that for the SCF calculation (20).
 In general, the SCF calculation is conducted with a coarser k-mesh 
 because the SCF takes longer time.
 
-<img src="../.img/fig_brillouin_fcc.png" height="100">
+<img src="../.img/fig_brillouin_fcc.png" height="100" title="caption">
 
 
 Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated with the above command.
