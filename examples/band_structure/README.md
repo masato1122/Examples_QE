@@ -265,7 +265,7 @@ python ../tools/mk_pwinput.py \
 To plot a band structure, symmetric k-points are selected as shown in the figure below.
 
 
-<figure><img src="../.img/fig_brillouin_fcc.png" height="200" title="caption" align='middle'><figcaption>Brillouin zone of FCC lattice. [W. Setyawan and S. Curtarolo, Comp. Mater. Sci. 49 299 (2010).]</figcaption></figure>
+<figure><img src="../.img/fig_brillouin_fcc.png" height="200" title="caption" align='middle'><figcaption>Fig. Brillouin zone of FCC lattice. [W. Setyawan and S. Curtarolo, Comp. Mater. Sci. 49 299 (2010).]</figcaption></figure>
 
 
 Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generated:
