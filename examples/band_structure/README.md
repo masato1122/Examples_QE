@@ -264,7 +264,7 @@ python ../tools/mk_pwinput.py \
 
 To plot a band structure, symmetric k-points are selected as shown in the figure below.
 
-<img src="../.img/fig_brillouin_fcc.png" height="200" title="caption">
+<figure><img src="../.img/fig_brillouin_fcc.png" height="200" title="caption"><figcaption>aaa</figcaption></figure>
 
 Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generated:
 
