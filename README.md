@@ -56,7 +56,7 @@ will be uploaded...
 FAQ
 ----
 
-### What is ``ModuleNotFoundError: No module named 'pymatgen'``?
+#### What is ``ModuleNotFoundError: No module named 'pymatgen'``?
 
 This message means you don't have pymatgen. In this case, you need to install pymatgen with
 
