@@ -208,9 +208,6 @@ is larger than that for the SCF calculation (20).
 In general, the SCF calculation is conducted with a coarser k-mesh 
 because the SCF takes longer time.
 
-<img src="../.img/fig_brillouin_fcc.png" height="100" title="caption">
-
-
 Make sure that ``nscf_dos.in``, ``dos.in``, and ``pdos.in`` were generated with the above command.
 
 ```
@@ -264,6 +261,9 @@ python ../tools/mk_pwinput.py \
     --outdir ./out \
     --property bands
 ```
+
+To plot a band structure, symmetric k-points are selected as shown in the figure below.
+<img src="../.img/fig_brillouin_fcc.png" height="100" title="caption">
 
 Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generated:
 
