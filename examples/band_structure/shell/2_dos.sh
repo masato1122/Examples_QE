@@ -1,11 +1,11 @@
 
-### make an input script
+#### make an input script
 python ../tools/mk_pwinput.py \
     --filename ../Si.cif \
     --pseudo_dir ../pseudo \
     --outdir ./out \
     --property dos \
-    --reciprocal_density 40
+    --reciprocal_density 80
 
 ### perform non-SCF calculation 
 ### which calculate wavefunctions and eigenvalues with a fixed charge distribution
@@ -16,6 +16,10 @@ dos.x < dos.in | tee dos.out
 
 ### calculate partial DOS
 projwfc.x < pdos.in | tee pdos.out
+
+### calculate partial DOS for each orbital
+sumpdos.x Si.pdos_*Si*s* > s_orbital.txt
+sumpdos.x Si.pdos_*Si*p* > p_orbital.txt
 
 ### plot DOS
 python ../tools/plot_dos.py --filename Si.dos

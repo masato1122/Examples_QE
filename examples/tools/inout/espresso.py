@@ -190,7 +190,7 @@ def write_additional_file(propt, info):
         indata[key] = {}
         indata[key]['outdir'] = info['outdir']
         indata[key]['prefix'] = info['prefix']
-        indata[key]['degauss'] = 0.01
+        #indata[key]['degauss'] = 0.01
     elif propt == 'bands':
         key = 'bands'
         indata[key] = {}
@@ -282,10 +282,13 @@ def generate_kmesh_density(structure, reciprocal_density=20):
     kpoints = Kpoints.automatic_density(structure, kppa)
     kpts = kpoints.kpts[0]
     kpts_shift = kpoints.kpts_shift
-    if 'monkhorst' in kpoints.style.name.lower():
-        style = 'automatic'
-    else:
-        style = 'gamma'
+    
+    #if 'monkhorst' in kpoints.style.name.lower():
+    #    style = 'automatic'
+    #else:
+    #    style = 'gamma'
+    
+    style = 'automatic'
     return kpts, kpts_shift, style
 
 

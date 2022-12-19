@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os.path
 import numpy as np
 from optparse import OptionParser
 
@@ -33,14 +34,28 @@ def plot_dos(dos, efermi, figname='fig_dos.png',
     
     ### DOS
     ydat = dos[:,1]
-    ax.plot(xdat, ydat, linestyle='None', lw=lw, marker='o', markersize=ms,
-            mec=cmap(0), mfc='none', mew=lw, label='DOS')
+    ax.plot(xdat, ydat, linestyle='-', lw=lw, marker='.', markersize=ms,
+            mec=cmap(0), mfc='none', mew=lw, label='total DOS')
     ax.axvline(0., lw=0.3, c='grey')
+
+    ### partial DOS
+    labels = ['s-orbital', 'p-orbital']
+    for i, fn in enumerate(['s_orbital.txt', 'p_orbital.txt']):
+        if os.path.exists(fn):
+            data = np.genfromtxt(fn)
+            ax.plot(
+                    data[:,0] - efermi,
+                    data[:,1],
+                    linestyle='-', lw=lw, 
+                    marker='.', markersize=ms, mew=lw, mec=cmap(i+1), mfc='None',
+                    label=labels[i]
+                )
     
     ### integrated DOS
     ydat = dos[:,2]
-    ax2.plot(xdat, ydat, linestyle='None', lw=lw, marker='o', markersize=ms,
-            mec=cmap(1), mfc='none', mew=lw, label="integrated")
+    ax2.plot(xdat, ydat, linestyle='-', c='black', lw=lw, 
+             marker='.', markersize=ms,
+             mec='black', mfc='none', mew=lw, label="integrated")
     
     set_axis(ax)
     set_axis(ax2)

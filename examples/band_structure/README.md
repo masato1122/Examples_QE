@@ -240,6 +240,12 @@ $ projwfc.x < pdos.in | tee pdos.out
 ```
 
 PDOS is saved in ``Si.pdos_atm***_wfc***`` files.
+The contribution of each atomic orbital can be obtained:
+
+```
+$ sumpdos.x Si.pdos_*Si*s* > s_orbital.txt
+$ sumpdos.x Si.pdos_*Si*p* > p_orbital.txt
+```
 
 Plot DOS (``Si.dos``) and PDOS (``Si.pdos_atm***_wfc***``). 
 If python is available, figures can be generated with commands below.
