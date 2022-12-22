@@ -1,5 +1,5 @@
 
-     Program BANDS v.7.1 starts on 12Dec2022 at  0:18:36 
+     Program BANDS v.7.1 starts on 22Dec2022 at 13: 5:36 
         Git branch: develop
         Last git commit: 9ddde6fa44e0fb1c7debb78532a4b581a6ef82fd
         Last git commit date: Fri Oct 28 07:34:35 2022 +0000
@@ -3470,10 +3470,10 @@ E      2.00 -1.00  0.00
 
  **************************************************************************
 
-     BANDS        :      8.36s CPU      8.47s WALL
+     BANDS        :      8.54s CPU      8.67s WALL
 
 
-   This run was terminated on:   0:18:45  12Dec2022            
+   This run was terminated on:  13: 5:45  22Dec2022            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

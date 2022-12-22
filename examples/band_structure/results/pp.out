@@ -1,5 +1,5 @@
 
-     Program DOS v.7.1 starts on 22Dec2022 at 13: 4:40 
+     Program POST-PROC v.7.1 starts on 22Dec2022 at 13: 4:31 
         Git branch: develop
         Last git commit: 9ddde6fa44e0fb1c7debb78532a4b581a6ef82fd
         Last git commit date: Fri Oct 28 07:34:35 2022 +0000
@@ -34,18 +34,22 @@
      G-vector sticks info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
-     Sum         877     877    265                17261    17261    2837
+     Sum         877     877    253                17261    17261    2741
 
      Using Slab Decomposition
 
 
-     Tetrahedra used
+     Calling punch_plot, plot_num =   0
+     Writing data to file  tmp.pp
+     Reading data from file  tmp.pp
+
+     Writing data to be plotted to file Si_rho.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+
+     POST-PROC    :      0.76s CPU      0.80s WALL
 
 
-     DOS          :      1.87s CPU      1.89s WALL
-
-
-   This run was terminated on:  13: 4:42  22Dec2022            
+   This run was terminated on:  13: 4:31  22Dec2022            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
