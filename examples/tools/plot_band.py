@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl.initialize import (set_matplot, set_axis, set_legend)
 
-def _add_lines_for_symmetric_points(
+def add_lines_for_symmetric_points(
         ax, kpoints, filename="nscf_bands.in", symmetry_names=None
         ):
     """
@@ -113,7 +113,7 @@ def plot_band(
     ### add vertical lines
     try:
         kpoints = bands[0][:,0]
-        _add_lines_for_symmetric_points(
+        add_lines_for_symmetric_points(
                 ax, kpoints, filename="nscf_bands.in",
                 symmetry_names=symmetry_names
                 )
