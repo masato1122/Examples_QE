@@ -1,0 +1,55 @@
+
+     Program Q2R v.6.5 starts on 24Dec2022 at 17: 9:47 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+
+     reading grid info from file Si.dyn0    
+  reading force constants from file Si.dyn1
+ macroscopic fields = T
+  25.27671   0.00000   0.00000
+   0.00000  25.27671   0.00000
+   0.00000   0.00000  25.27671
+  na=            1
+  -1.25100   0.00000   0.00000
+   0.00000  -1.25100   0.00000
+   0.00000   0.00000  -1.25100
+  na=            2
+  -1.25100   0.00000   0.00000
+   0.00000  -1.25100   0.00000
+   0.00000   0.00000  -1.25100
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file Si.dyn2
+  nqs=            4
+ q=  -0.35355339  0.35355339  0.35355339
+ q=   0.35355339 -0.35355339  0.35355339
+ q=  -0.35355339 -0.35355339 -0.35355339
+ q=   0.35355339  0.35355339 -0.35355339
+  reading force constants from file Si.dyn3
+  nqs=            3
+ q=   0.00000000  0.00000000  0.70710678
+ q=   0.00000000  0.70710678  0.00000000
+ q=   0.70710678  0.00000000  0.00000000
+
+      q-space grid ok, #points =    8
+
+      fft-check warning: sum of imaginary terms = 3.840259E-11
+ 
+     Q2R          :      0.01s CPU      0.09s WALL
+
+ 
+   This run was terminated on:  17: 9:47  24Dec2022            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

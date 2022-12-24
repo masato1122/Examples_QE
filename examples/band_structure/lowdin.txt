@@ -1,0 +1,8 @@
+
+Lowdin Charges: 
+
+     Atom #   1: total charge =   3.9660, s =  1.1713, 
+     Atom #   1: total charge =   3.9660, p =  2.7947, pz=  0.9316, px=  0.9316, py=  0.9316, 
+     Atom #   2: total charge =   3.9660, s =  1.1713, 
+     Atom #   2: total charge =   3.9660, p =  2.7947, pz=  0.9316, px=  0.9316, py=  0.9316, 
+     Spilling Parameter:   0.0085
