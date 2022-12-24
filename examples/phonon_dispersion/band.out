@@ -1,5 +1,5 @@
 
-     Program MATDYN v.6.5 starts on 24Dec2022 at 17:10:46 
+     Program MATDYN v.6.5 starts on 24Dec2022 at 18:19:31 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,10 +14,10 @@
      MPI processes distributed on     1 nodes
  mass for atomic type   1 not given; uses mass from file Si.fc                                                                                                                                                                                                                                                           
  
-     MATDYN       :      0.02s CPU      0.07s WALL
+     MATDYN       :      0.01s CPU      0.04s WALL
 
  
-   This run was terminated on:  17:10:46  24Dec2022            
+   This run was terminated on:  18:19:31  24Dec2022            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
