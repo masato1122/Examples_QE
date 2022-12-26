@@ -9,7 +9,7 @@
   ecutwfc = 60.0,
   occupations = 'fixed',
   ibrav = 2,
-  celldm(1) = 10.26733,
+  celldm(1) = 10.2672,
   nat = 2,
   ntyp = 1,
 /

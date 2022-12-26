@@ -9,7 +9,7 @@
   ecutwfc = 60.0,
   occupations = 'fixed',
   ibrav = 2,
-  celldm(1) = 10.26733,
+  celldm(1) = 10.2672,
   nat = 2,
   ntyp = 1,
 /
@@ -27,5 +27,5 @@ ATOMIC_POSITIONS crystal
   Si 0.250000 0.250000 0.250000
   Si 0.500000 0.500000 0.500000
 K_POINTS automatic
- 6 6 6 1 1 1
+ 4 4 4 1 1 1
 
