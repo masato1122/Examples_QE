@@ -118,7 +118,7 @@ def _plot_symmetric_kpoints(ax, kdat, idx, sym_names):
 
 def plot_band(kpoints, frequencies, idx_sym, figname='fig_band.png', 
         symmetric_names=None,
-        dpi=300, fontsize=7, fig_width=2.8, aspect=0.7, lw=0.5, ms=0.5):
+        dpi=300, fontsize=7, fig_width=2.8, aspect=0.6, lw=0.5, ms=0.5):
     
     cmap = plt.get_cmap("tab10")
     set_matplot(fontsize=fontsize)
