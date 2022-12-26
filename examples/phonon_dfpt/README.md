@@ -77,6 +77,8 @@ If python is available, phonon dispersion can be plotted with ``plot_phband.py``
 $ python ../tools/plot_phband.py --file_band Si_band.freq --symmetric_names "G:X:U:K:G:L:W:X"
 ```
 
+<img src="./results/fig_band.png" height="200" />
+
 ## 5. Calculate phonon DOS
 
 Calculate phonon DOS with a fine k-mesh:
@@ -90,6 +92,9 @@ Plot the result:
 ```
 $ python ../tools/plot_dos.py -f Si.dos
 ```
+
+<img src="./results/fig_dos.png" height="200" />
+
 
 The above process can be run with ``run_all.sh``:
 
