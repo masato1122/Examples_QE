@@ -128,7 +128,6 @@ Make sure that ``eigen_G.axsf`` was obtained.
 
 4. To modify the length of arrows, select [Modify] => [Force Settings] and modify "Length Factor".
 
-
-
+<img src="./results/eigen_G_mode4.png" height="200" />
 
 
