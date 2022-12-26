@@ -1,17 +1,3 @@
-#!/bin/sh
-WORKDIR=$(cd $(dirname $0); pwd)
-
-#alat=10.2273
-
-if [ $# -ge 1 ]; then
-    alat=$1
-else
-    echo -n "Input file name: "
-    read alat
-fi
-
-OFILE=scf.in
-cat >$OFILE<<EOF
 &CONTROL
   calculation = 'scf',
   outdir = './out',
@@ -23,7 +9,7 @@ cat >$OFILE<<EOF
   ecutwfc = 60.0,
   occupations = 'fixed',
   ibrav = 2,
-  celldm(1) = $alat,
+  celldm(1) = 10.26733,
   nat = 2,
   ntyp = 1,
 /
@@ -41,6 +27,5 @@ ATOMIC_POSITIONS crystal
   Si 0.250000 0.250000 0.250000
   Si 0.500000 0.500000 0.500000
 K_POINTS automatic
- 4 4 4 1 1 1
-EOF
+ 6 6 6 1 1 1
 
