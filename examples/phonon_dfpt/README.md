@@ -58,6 +58,12 @@ Make sure IFCs in real space (``Si.fc``) were obtained.
 
 ## 4. Calculate phonon dispersion
 
+If python is available, the input script ``band.in`` can be generated with the following command.
+
+```
+$ python ../tools/mk_phband_input.py -f ../Si.cif
+```
+
 Calculate phonon dispersion with IFCs in reall space:
 
 ```

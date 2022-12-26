@@ -80,6 +80,8 @@ def plot_dos(dos, efermi, carrier='electron', figname='fig_dos.png',
         set_legend2(ax, ax2)
     else:
         set_legend(ax, fs=6)
+    
+    ax.axhline(0, lw=0.3, linestyle='-', c='grey')
 
     fig.savefig(figname, dpi=dpi, bbox_inches='tight')
     print(" Output", figname)
