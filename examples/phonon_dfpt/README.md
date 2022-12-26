@@ -79,9 +79,15 @@ $ python ../tools/plot_phband.py --file_band Si_band.freq --symmetric_names "G:X
 
 ## 5. Calculate phonon DOS
 
-Calculate DOS with a fine k-mesh:
+Calculate phonon DOS with a fine k-mesh:
 
 ```
 $ matdyn.x < dos.in | tee dos.out
+```
+
+Plot the result:
+
+```
+$ python ../tools/plot_dos.py -f Si.dos
 ```
 
