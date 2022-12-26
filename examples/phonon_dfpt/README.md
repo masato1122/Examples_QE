@@ -120,13 +120,13 @@ $ dynmat.x < eigen_G.in | tee eigen_G.out
 
 Make sure that ``eigen_G.axsf`` was obtained.
 
-* Run XCrysDen, then select [File] => [Open Structure] => [Open AXSF].
+1. Run XCrysDen, then select [File] => [Open Structure] => [Open AXSF].
 
-* Select one of the six displace vectors.
+2. Select one of the six displace vectors.
 
-* Select [Hide] => [Display] => [Forces].
+3. Select [Hide] => [Display] => [Forces].
 
-* To modify the length of arrows, select [Modify] => [Force Settings] and modify "Length Factor".
+4. To modify the length of arrows, select [Modify] => [Force Settings] and modify "Length Factor".
 
 
 
