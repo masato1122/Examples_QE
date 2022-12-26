@@ -1,0 +1,18 @@
+&CONTROL
+  calculation = 'scf',
+  outdir = './out',
+  prefix = 'Si',
+  pseudo_dir = '../../pseudo',
+  restart_mode = 'from_scratch',
+  tprnfor = .true.
+/
+&SYSTEM
+  ecutwfc = 60.0,
+  occupations = 'fixed',
+  ibrav = 0,
+  nat = 16,
+  ntyp = 1,
+/
+&ELECTRONS
+  conv_thr = 1d-06,
+/

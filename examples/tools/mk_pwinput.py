@@ -15,7 +15,7 @@ def main(options):
     ### Read the give structure file and get the primitive cell
     struct_tmp = Structure.from_file(options.filename)
     structure = struct_tmp.get_primitive_structure()
-    
+
     ### add prefix to the dictionary
     prefix = structure.composition.reduced_formula
     dict_options['prefix'] = prefix

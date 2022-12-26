@@ -105,13 +105,19 @@ def main(options):
     
     dos, efermi, carrier = read_dos_file(options.filename)
 
-    plot_dos(dos, efermi, carrier=carrier)
+    plot_dos(dos, efermi, carrier=carrier, figname=options.figname)
     
 if __name__ == '__main__':
     parser = OptionParser()
+    
     parser.add_option("-f", "--filename", dest="filename", type="string",
                       default="./Si.dos", 
                       help=".dos file name [Si.dos]")
+    
+    parser.add_option("--figname", dest="figname", type="string",
+                      default="fig_dos.png", 
+                      help="figure name [fig_dos.png]")
+    
     (options, args) = parser.parse_args()
     main(options)
 

@@ -41,27 +41,57 @@ def add_lines_for_symmetric_points(
             idx_div.append(nk_sum - 1)
     
     ### add vertical lines
-    for ii in idx_div:
-        xsym = kpoints[ii]
+    for isym, ik in enumerate(idx_div):
+        xsym = kpoints[ik]
         ax.axvline(xsym, lw=0.3, c='black', linestyle='-')
-    
-    ### add new ticks
-    flag_new = False
+        
+    ### xticklabels
     if symmetry_names is not None:
-        xticks = kpoints[idx_div]
+        
         labels = symmetry_names.split(":")
-        ##
-        labels_mod = []
-        for ll in labels:
-            if ll[0] == "G":
-                labels_mod.append("${\\rm \\Gamma}$")
+        
+        xticks = []
+        xticklabels = []
+        for isym, ik in enumerate(idx_div):
+            name = labels[isym]
+            if name[0] == "G":
+                name = "${\\rm \\Gamma}$"
+            
+            xsym = kpoints[ik]
+            if isym == 0:
+                xticks.append(xsym)
+                ni = labels[isym]
+                xticklabels.append(ni)
             else:
-                labels_mod.append(ll)
-        ##
-        if len(xticks) == len(labels_mod):
-            flag_new = True
-            ax.set_xticks(xticks)
-            ax.set_xticklabels(labels_mod)
+                if abs(kpoints[ik] - kpoints[idx_div[isym-1]]) < 1e-3:
+                    name0 = xticklabels[-1]
+                    ni = "${\\rm ^{%s}/_{%s}}$" % (name0, name)
+                    xticklabels[-1] = ni
+                else:
+                    xticks.append(xsym)
+                    ni = labels[isym]
+                    xticklabels.append(ni)
+         
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticklabels)
+     
+    ##### add new ticks
+    ##flag_new = False
+    ##if symmetry_names is not None:
+    ##    xticks = kpoints[idx_div]
+    ##    labels = symmetry_names.split(":")
+    ##    ##
+    ##    labels_mod = []
+    ##    for ll in labels:
+    ##        if ll[0] == "G":
+    ##            labels_mod.append("${\\rm \\Gamma}$")
+    ##        else:
+    ##            labels_mod.append(ll)
+    ##    ##
+    ##    if len(xticks) == len(labels_mod):
+    ##        flag_new = True
+    ##        ax.set_xticks(xticks)
+    ##        ax.set_xticklabels(labels_mod)
     
     #### delete original ticks
     if flag_new == False:
