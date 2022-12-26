@@ -31,14 +31,14 @@ phonopy_disp.yaml  supercell-001.in  supercell.in
 ## Prepare input scripts of QE
 
 ```
-$ header=../scripts/header.in
-$ cat ${header} supercell.in > pristine.in
-$ for i in 001; do
-$     cat ${header} supercell-${i}.in > Si-${i}.in
-$ done
+header=../scripts/header.in
+cat ${header} supercell.in > pristine.in
+for i in 001; do
+    cat ${header} supercell-${i}.in > Si-${i}.in
+done
 ```
 
-``Si-***.in`` were generated.
+``Si-001.in`` were generated.
 
 Note that following parameters are set in ``header``.
 
@@ -47,12 +47,16 @@ tprnfor = .true.
 nat = 16
 ```
 
+``tprnfor`` is set to be ``.true.`` shen atomic forces are calculated and 
+``nat`` is the number of atoms in a supercell.
+
+
 ## Calculate atomic forces with QE
 
 ```
-$ for label in pristine Si-001; do
-$    pw.x < ${label}.in | tee ${label}.out
-$ done
+for label in pristine Si-001; do
+    pw.x < ${label}.in | tee ${label}.out
+done
 ```
 
 Make sure following files are generated.
