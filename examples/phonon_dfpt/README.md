@@ -3,7 +3,7 @@ Calculation of Phonon Dispersion
 
 This example can be found [HERE](https://github.com/masato1122/Examples_QE/tree/main/examples/phonon_dfpt).
 
-You can learn how to calculate phonon dispersion based on a density functional perturbation theory (DFPT).
+With this example, you can learn how to calculate phonon dispersion based on a density functional perturbation theory (DFPT).
 
 # Contents
 
@@ -90,4 +90,12 @@ Plot the result:
 ```
 $ python ../tools/plot_dos.py -f Si.dos
 ```
+
+The above process can be run with ``run_all.sh``:
+
+```
+$ cp ./shell/run_all.sh ./
+$ sh run_all.sh
+```
+
 
