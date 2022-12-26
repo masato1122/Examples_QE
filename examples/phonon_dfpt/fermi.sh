@@ -18,12 +18,6 @@ MPIRUN=/opt/intel/oneapi/mpi/2021.6.0/bin/mpirun
 #####################
 $MPIRUN -np $nprocs pw.x < scf.in | tee scf.out
 
-######################
-## phonon vibration ##
-######################
-$MPIRUN -np $nprocs ph.x < ph_G.in | tee ph_G.out
-###$MPIRUN -np $nprocs ph.x < ph_X.in | tee ph_X.out
-
 #####################
 ## force constants ##
 #####################
@@ -50,4 +44,10 @@ python ../tools/plot_phband.py \
 #########
 $MPIRUN -np $nprocs matdyn.x < dos.in | tee dos.out
 $MPIRUN -np $nprocs python ../tools/plot_dos.py -f Si.dos
+
+######################
+## phonon vibration ##
+######################
+#$MPIRUN -np $nprocs ph.x < ph_G.in | tee ph_G.out
+#matdyn.x < eigen_G.in | tee eigen_G.out
 
