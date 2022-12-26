@@ -29,7 +29,7 @@ First of all, run the SCF calculation same as the calculation of electron band s
 $ pw.x < scf.in | tee scf.out
 ``` 
 
-## 3. Calculate force constants
+## 3. Calculate force constants with DFPT
 
 Firstly, interatomic force constants (IFCs) in reciprocal space are calculated with DFPT 
 (this process takes a few minutes).
