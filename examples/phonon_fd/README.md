@@ -16,8 +16,7 @@ $ cd ./1_forces
 $ phonopy --qe -d --dim="2 2 2" -c ../../band_structure/scripts/scf.in
 ```
 
-2x2x2 supercells are created. 
-Make sure that following files were generated.
+2x2x2 supercells are created as below. 
 
 ```
 $ ls
@@ -33,9 +32,9 @@ phonopy_disp.yaml  supercell-001.in  supercell.in
 
 ```
 $ header=../scripts/header.in
-$ cat ${header} supercell.in >| pristine.in
+$ cat ${header} supercell.in > pristine.in
 $ for i in 001; do
-$     cat ${header} supercell-${i}.in >| Si-${i}.in
+$     cat ${header} supercell-${i}.in > Si-${i}.in
 $ done
 ```
 
