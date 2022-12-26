@@ -4,8 +4,8 @@
     outdir = './out' 
     fildyn = 'Si.dyn'
     ldisp = .true.
-    nq1 = 8
-    nq2 = 8
-    nq3 = 8
+    nq1 = 2
+    nq2 = 2
+    nq3 = 2
 /
 

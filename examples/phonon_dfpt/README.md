@@ -7,9 +7,16 @@ You can learn how to calculate phonon dispersion based on a density functional p
 
 # Contents
 
-* ``scripts`` :
+* ``scripts`` : input scripts for QE
 
-* ``results`` :  
+* ``results`` : final results
 
-* ``shell`` : 
+* ``shell`` : shell scripts to run every calculations
+
+# Calcution process
+
+## 1. 
+
+
+##
 

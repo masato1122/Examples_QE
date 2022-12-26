@@ -1,4 +1,5 @@
 &input
+    asr = 'simple'
     dos = .false.
     flfrc = 'Si.fc'
     flfrq = 'Si_band.freq'

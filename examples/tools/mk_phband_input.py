@@ -10,6 +10,7 @@ from inout.kpath import get_kpath
 def get_default_params(prefix):
     
     params = {}
+    params['asr'] = 'simple'
     params['flfrc'] = "%s.fc" % (prefix)
     params['flfrq'] = "%s_band.freq" % (prefix)
     params['flvec'] = "%s_band.modes" % (prefix)

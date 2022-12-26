@@ -1,3 +1,17 @@
+#!/bin/sh
+WORKDIR=$(cd $(dirname $0); pwd)
+
+if [ $# -ge 1 ]; then
+    nk=$1
+else
+    echo -n " nk: "
+    read nk
+fi
+
+alat=10.2684
+
+OFILE=scf.in
+cat >$OFILE<<EOF
 &CONTROL
   calculation = 'scf',
   outdir = './out',
@@ -9,7 +23,7 @@
   ecutwfc = 60.0,
   occupations = 'fixed',
   ibrav = 2,
-  celldm(1) = 10.2273
+  celldm(1) = $alat,
   nat = 2,
   ntyp = 1,
 /
@@ -27,4 +41,6 @@ ATOMIC_POSITIONS crystal
   Si 0.250000 0.250000 0.250000
   Si 0.500000 0.500000 0.500000
 K_POINTS automatic
-  4 4 4 1 1 1
+ $nk $nk $nk 1 1 1
+EOF
+

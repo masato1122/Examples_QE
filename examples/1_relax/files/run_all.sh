@@ -1,6 +1,6 @@
 
 ### initial lattice parameter
-alat0=10.2273
+alat0=10.26310
 
 ### output file name
 ofile=energy.txt

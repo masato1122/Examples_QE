@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mytool.mpl.initialize import (set_matplot, set_axis, set_legend)
 
-def plot_data(xdat, ydat, xc, figname='fig_alat-E.png', 
+def plot_data(xdat, ydat, figname='fig_alat-E.png', 
         dpi=300, fontsize=7, fig_width=2.3, aspect=0.9, lw=0.5, ms=2.0):
     
     ### fitting
@@ -20,7 +20,7 @@ def plot_data(xdat, ydat, xc, figname='fig_alat-E.png',
     fig = plt.figure(figsize=(fig_width, aspect*fig_width))
         
     ax = plt.subplot()
-    ax.set_xlabel('${\\rm a_{lat} (\\Bohr)}$')
+    ax.set_xlabel('${\\rm a_{lat} (Bohr)}$')
     ax.set_ylabel('Energy (Ry)')
     
     ax.plot(xdat, ydat, linestyle='None', lw=lw, marker='o', markersize=ms,

@@ -9,7 +9,6 @@ build
 *.backup
 *.orig
 *.org
-do.sh
 
 .DS_Store
 *box/
@@ -19,10 +18,13 @@ memo.txt
 *.swp
 out
 backup
-del.sh
 old
 *.zip
 mytest
 work
 Si.dyn*
+
+do.sh
+del.sh
+fermi.sh
 

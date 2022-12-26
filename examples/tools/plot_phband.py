@@ -89,7 +89,7 @@ def _plot_symmetric_kpoints(ax, kdat, idx, sym_names):
     for isym, ik_sym in enumerate(idx):
         k = kdat[ik_sym]
         ksym.append(k)
-        ax.axvline(k, linestyle='-', c='grey', lw=0.5)
+        ax.axvline(k, linestyle='-', c='grey', lw=0.3)
         
         ###
         name = names[isym]
@@ -138,6 +138,8 @@ def plot_band(kpoints, frequencies, idx_sym, figname='fig_band.png',
     
     ## symmetric kpoints
     _plot_symmetric_kpoints(ax, kpoints, idx_sym, symmetric_names)
+
+    ax.axhline(0, lw=0.3, c='grey', linestyle='-')
     
     fig.savefig(figname, dpi=dpi, bbox_inches='tight')
     print(" Output", figname)

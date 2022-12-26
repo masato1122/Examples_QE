@@ -1,6 +1,6 @@
 &inputph
     tr2_ph = 1.0e-14
-    prefix = 'Si_G'
+    prefix = 'Si'
     outdir = './out'
     fildyn = 'Si_G.dyn'
     ldisp = .false.
