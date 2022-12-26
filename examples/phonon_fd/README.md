@@ -1,6 +1,9 @@
 Calculation of Phonon Dispersion with Finite-displacement
 =========================================================
 
+In this example, phonon dispersion is calculated with the finite displacement method, 
+which may be more intuitive than the DFPT.
+
 # Install Phonopy
 
 ```
@@ -8,6 +11,8 @@ $ pip install phonopy
 ```
 
 # Calcute atomic forces in supercells with displacements
+
+Please also read the official homepage: https://phonopy.github.io/phonopy/qe.html.
 
 ## Make a supercell from an input file of QE
 
