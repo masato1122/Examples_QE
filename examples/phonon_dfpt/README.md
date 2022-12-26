@@ -40,8 +40,7 @@ $ ph.x < ph.in | tee ph.out
 ```
 
 Make sure that dynamical matrices (``Si.dyn*``) were obtained.
-
-Then, IFCs are converted to those in the real space:
+Then, convert IFCs from the reciprocal space to the real space.
 
 ```
 $ q2r.x < q2r.in | tee q2r.out
