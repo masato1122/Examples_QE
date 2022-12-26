@@ -65,7 +65,9 @@ $ matdyn.x < band.in | tee band.out
 ```
 
 > **NOTE:** ``asr`` parameter in ``band.in`` denotes acoustic sum rule. \
-Because of numerical errors, IFCs do not satisfy the ASR: $\sum_{\mathbf{L}, j}C_{\alpha i, \beta j}(\mathbf{R}_L) = 0$
+Because of numerical errors, IFCs do not strictly satisfy the ASR: $\sum_{\mathbf{L}, j}_ _C_{\alpha i, \beta j}(\mathbf{R}_L_) = 0$, \
+where $C$ is IFC, $\alpha, \beta$ denotes site, $i, j$ denotes direction, and $\mathbf{R_L}$ denotes
+
 
 
 Make sure that ``Si_band.{freq, freq.gp, modes}`` were obtained.
