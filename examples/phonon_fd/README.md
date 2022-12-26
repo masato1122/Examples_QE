@@ -6,9 +6,18 @@ which may be more intuitive than the DFPT.
 
 # Install Phonopy
 
+Phonopy is a widely used software for lattice dynamics with a user-friendly python interface.
+
 ```
 $ pip install phonopy
 ```
+
+Make sure that ``phonopy`` command is available.
+
+```
+$ phonopy -h
+```
+
 
 # Calcute atomic forces in supercells with displacements
 
@@ -30,7 +39,7 @@ phonopy_disp.yaml  supercell-001.in  supercell.in
 
 * ``supercell.in``: pristine supercell structure
 * ``supercell-***.in``: supercells in which an atom is slightly displaced
-* ``phonpy_disp.yaml``: info of the displaced structures
+* ``phonpy_disp.yaml``: info of the displacements
 
 
 ## Prepare input scripts of QE
@@ -71,7 +80,7 @@ $ ls *.out
 pristine.out  Si-001.out
 ```
 
-## Extract displacements and forces from output files
+## Extract forces from output files
 
 The following command create ``FORCE_SETS``.
 
@@ -82,12 +91,8 @@ $ phonopy -f Si-001.out
 ## Calculate force constants
 
 ```
+$ cp ../scripts/band.conf ./
 $ phonopy --qe -c ../scripts/scf.in -p band.conf
 ```
-
-
-## Reference
-
-* https://phonopy.github.io/phonopy/qe.html
 
 
