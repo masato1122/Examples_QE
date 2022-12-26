@@ -1,0 +1,11 @@
+phonon at Gamma
+&inputph
+    asr = .true.
+    tr2_ph = 1.0e-14
+    prefix = 'Si'
+    outdir = './out'
+    fildyn = 'Si_G.dyn'
+    ldisp = .false.
+/
+0.0 0.0 0.0
+

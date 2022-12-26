@@ -15,25 +15,19 @@ With this example, you can learn how to calculate phonon dispersion based on a d
 
 # Calcution process
 
-## 0. Copy input scripts
+## 1. Copy input scripts
 
 ```
 $ cp ./scripts/* ./
 ```
 
-## 1. Run an SCF calculation
+## 2. Run an SCF calculation
 
 First of all, run the SCF calculation same as the calculation of electron band structure.
 
 ```
 $ pw.x < scf.in | tee scf.out
 ``` 
-
-## 2. Calcualte eigenvalues at $\Gamma$ point
-
-```
-$ ph.x < ph_G.in | tee ph_G.out
-```
 
 ## 3. Calculate force constants
 
@@ -103,5 +97,38 @@ The above process can be run with ``run_all.sh``:
 $ cp ./shell/run_all.sh ./
 $ sh run_all.sh
 ```
+
+## 6. Visualize of phonon modes at $\Gamma$ point
+
+Install ``XCrySDen`` from http://www.xcrysden.org/Download.html.
+
+```
+$ ph.x < ph_G.in | tee ph_G.out
+$ cat ph_G.out | grep freq
+```
+
+Six eigenvalues, triple degenerate acoustic and optical modes, are obtained.
+To make the frequency of the acoustic modes zero, the structure optimization and more accurate calculations 
+(large k-mesh, larger cutoff energy, ...) are required.
+Make sure that the dynamic matrix at $\Gamma$ point (``Si_G.dyn``) was obtained.
+
+Calculate eigenvectors with the obtained dynamical matrix.
+
+```
+$ dynmat.x < eigen_G.in | tee eigen_G.out
+```
+
+Make sure that ``eigen_G.axsf`` was obtained.
+
+* Run XCrysDen, then select [File] => [Open Structure] => [Open AXSF].
+
+* Select one of the six displace vectors.
+
+* Select [Hide] => [Display] => [Forces].
+
+* To modify the length of arrows, select [Modify] => [Force Settings] and modify "Length Factor".
+
+
+
 
 
