@@ -64,7 +64,7 @@ Calculate phonon dispersion with IFCs in reall space:
 $ matdyn.x < band.in | tee band.out
 ```
 
-> **NOTE:** ``asr`` parameter in ``band.in`` denotes acoustic sum rule. Because of numerical errors, IFCs do not satisfy the ASR: $\sum_{\bm{L}, j}C_{\alpha i, \beta j}(\bm{R}_L) = 0$
+> **NOTE:** ``asr`` parameter in ``band.in`` denotes acoustic sum rule. Because of numerical errors, IFCs do not satisfy the ASR: $\sum_{\mathbf{L}, j}C_{\alpha i, \beta j}(\matbf{R}_L) = 0$
 
 
 Make sure that ``Si_band.{freq, freq.gp, modes}`` were obtained.
