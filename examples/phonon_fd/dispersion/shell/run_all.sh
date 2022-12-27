@@ -13,6 +13,7 @@ for i in 001; do
 done
 
 ### 3. calculate forces with QE
+cp ./results/Si-001.out ./
 ##for label in pristine Si-001; do
 #for label in Si-001; do
 #    pw.x < ${label}.in | tee ${label}.out
