@@ -72,7 +72,7 @@ The following command create ``FORCE_SETS``.
 $ phonopy -f Si-001.out
 ```
 
-## Calculate phonon dispersion
+## 5. Calculate phonon dispersion
 
 While force constants are not be stored, they are calculated during this process.
 
@@ -81,9 +81,11 @@ $ cp ../scripts/band.conf ./
 $ phonopy --qe -c ../scripts/Si.in -p band.conf
 ```
 
-## Plot phonon dispersion
+## 6. Plot phonon dispersion
 
 ```
 $ python ../tools/plot_phband_phonopy.py -f band.yaml
 ```
+
+<img src="./results/fig_phband_phonopy.png" height="200" />
 
