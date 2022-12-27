@@ -5,7 +5,7 @@ from optparse import OptionParser
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from mytool.mpl.initialize import (set_matplot, set_axis, set_legend)
+from mpl.initialize import (set_matplot, set_axis, set_legend)
     
 def _extract_symmetric_kpoints(kpoints):
     

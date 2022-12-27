@@ -24,5 +24,5 @@ for i in `seq -5 15`; do
     echo $i $alat $ene >> $ofile
 done
 
-python fit.py
+python ../tools/fit.py
 

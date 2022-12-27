@@ -5,7 +5,7 @@ from optparse import OptionParser
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from mytool.mpl.initialize import (set_matplot, set_axis, set_legend)
+from mpl.initialize import (set_matplot, set_axis, set_legend)
 
 def plot_data(xdat, ydat, figname='fig_alat-E.png', 
         dpi=300, fontsize=7, fig_width=2.3, aspect=0.9, lw=0.5, ms=2.0):

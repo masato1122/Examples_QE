@@ -280,6 +280,7 @@ Make sure that ``nscf_bands.in``, ``bands.in``, and ``plotband.in`` are generate
 Calculate the band structure:
 
 ```
+$ pw.x < nscf_bands.in | tee nscf_bands.out
 $ bands.x < bands.in | tee bands.out
 ```
 

@@ -18,7 +18,7 @@ def extract_dispersion(obj):
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from mytool.mpl.initialize import (set_matplot, set_axis, set_legend)
+from mpl.initialize import (set_matplot, set_axis, set_legend)
 
 def plot_band(ks, fs, figname='fig_phband_phonopy.png', 
         dpi=300, fontsize=7, fig_width=2.8, aspect=0.7, lw=0.5, ms=2.0):
