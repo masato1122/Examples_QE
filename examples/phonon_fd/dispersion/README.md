@@ -1,7 +1,7 @@
 Calculation of Phonon Dispersion with Finite-displacement method
 =================================================================
 
-## Supercells with displacements
+## 1. Prepare supercells with displacements
 
 Suprecells with small displacements are created with Phonopy.
 
@@ -21,7 +21,7 @@ phonopy_disp.yaml  supercell-001.in  supercell.in
 * ``supercell-***.in``: supercells in which an atom is slightly displaced
 * ``phonpy_disp.yaml``: info of the displacements
 
-## Input scripts for QE
+## 2. Prepare input scripts for QE
 
 ```
 header=../scripts/header.in
@@ -44,7 +44,7 @@ nat = 64
 ``nat`` is the number of atoms in a supercell.
 
 
-## Atomic forces in supercells with displacements
+## 3. Calculate atomic forces in supercells with displacements
 
 ```
 for label in 001; do
@@ -64,7 +64,7 @@ $ ls *.out
 ... Si-001.out
 ```
 
-## Extraction of atomic forces from output files
+## 4. Extract atomic forces from output files
 
 The following command create ``FORCE_SETS``.
 
@@ -72,7 +72,7 @@ The following command create ``FORCE_SETS``.
 $ phonopy -f Si-001.out
 ```
 
-## Calculation of phonon dispersion
+## Calculate phonon dispersion
 
 While force constants are not be stored, they are calculated during this process.
 
