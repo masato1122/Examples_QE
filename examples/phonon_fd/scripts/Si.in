@@ -1,0 +1,41 @@
+&CONTROL
+  calculation = 'scf',
+  outdir = './out',
+  prefix = 'Si',
+  pseudo_dir = '../../pseudo',
+  restart_mode = 'from_scratch',
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  ecutwfc = 60.0,
+  occupations = 'fixed',
+  ibrav = 0,
+  nat = 8,
+  ntyp = 1,
+/
+&ELECTRONS
+  diagonalization = 'david'
+  conv_thr = 1d-06,
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Si  28.0855 Si.pbesol-n-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+  Si 0.250000 0.750000 0.250000
+  Si 0.000000 0.000000 0.500000
+  Si 0.250000 0.250000 0.750000
+  Si 0.000000 0.500000 0.000000
+  Si 0.750000 0.750000 0.750000
+  Si 0.500000 0.000000 0.000000
+  Si 0.750000 0.250000 0.250000
+  Si 0.500000 0.500000 0.500000
+K_POINTS automatic
+  4 4 4 1 1 1
+CELL_PARAMETERS angstrom
+  5.433170 0.000000 0.000000
+  -0.000000 5.433170 0.000000
+  0.000000 0.000000 5.433170

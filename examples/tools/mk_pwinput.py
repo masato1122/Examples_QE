@@ -13,9 +13,12 @@ def main(options):
     dict_options = eval(str(options))
     
     ### Read the give structure file and get the primitive cell
-    struct_tmp = Structure.from_file(options.filename)
-    structure = struct_tmp.get_primitive_structure()
-
+    if options.primitive:
+        struct_tmp = Structure.from_file(options.filename)
+        structure = struct_tmp.get_primitive_structure()
+    else:
+        structure = Structure.from_file(options.filename)
+    
     ### add prefix to the dictionary
     prefix = structure.composition.reduced_formula
     dict_options['prefix'] = prefix
@@ -55,6 +58,10 @@ if __name__ == '__main__':
     parser.add_option("-f", "--filename", dest="filename", type="string",
                       default="../Si.cif", 
                       help="structure file name [../Si.cif]")
+    
+    parser.add_option("--primitive", dest="primitive", type="int",
+                      default=1, 
+                      help="get primitive structure (0.Off, 1.On [1]")
     
     parser.add_option("--reciprocal_density", dest="reciprocal_density", 
                       type="float", default=20, 
