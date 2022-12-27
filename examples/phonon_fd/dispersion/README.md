@@ -3,12 +3,14 @@ Calculation of Phonon Dispersion with Finite-displacement method
 
 ## Supercells with displacements
 
+Suprecells with small displacements are created with Phonopy.
+
 ```
 $ phonopy --qe -d --dim="2 2 2" -c ../scripts/Si.in
 ```
 
 2x2x2 supercells with displacements are created from `../scripts/Si.in` 
-which contains info for a conventional unit cell of Si.
+which contains info of a conventional unit cell of Si.
 
 ```
 $ ls
