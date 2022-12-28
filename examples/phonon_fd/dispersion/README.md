@@ -61,7 +61,7 @@ $ ls *.out
 
 ## 4. Extract atomic forces from output files
 
-The following command create ``FORCE_SETS``.
+The following command creates ``FORCE_SETS``.
 
 ```
 $ phonopy -f Si-001.out
