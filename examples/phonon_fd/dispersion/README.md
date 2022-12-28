@@ -76,8 +76,9 @@ the set of displacements (``phonopy_disp.yaml``) and forces (``FORCE_SETS``).
 $ phonopy --qe -c ../scripts/Si.in -p ../scripts/band.conf --writefc
 ```
 
-> **OUTPUT**: \
-FORCECONSTANT 
+> **OUTPUT** \
+FORCE_CONSTANTs: harmonic force constants \
+phonopy.yaml: eigenvalues
 
 ## 6. Plot phonon dispersion
 
