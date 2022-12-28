@@ -61,7 +61,7 @@ $ ls *.out
 
 ## 4. Extract atomic forces from output files
 
-The following command creates ``FORCE_SETS``.
+The following command creates ``FORCE_SETS``, set of atomic forces in supercells.
 
 ```
 $ phonopy -f Si-001.out
@@ -69,12 +69,14 @@ $ phonopy -f Si-001.out
 
 ## 5. Calculate phonon dispersion
 
-While force constants are not stored, they are calculated during this process.
+Calcualte phonon dispersion with 
+the set of displacements (``phonopy_disp.yaml``) and forces (``FORCE_SETS``).
 
 ```
-$ cp ../scripts/band.conf ./
-$ phonopy --qe -c ../scripts/Si.in -p band.conf
+$ phonopy --qe -c ../scripts/Si.in -p ../scripts/band.conf --writefc
 ```
+
+> ##OUTPUT##: 
 
 ## 6. Plot phonon dispersion
 
