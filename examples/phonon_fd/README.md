@@ -17,15 +17,10 @@ To in stall Phonopy, it is recommended to install python environment with Anacon
 $ conda create -n py37 python3.7 nanotechnology
 ```
 
-Activate the created environment
+Activate the created environment.
+Note that you always need to activate ``nanotechnology`` environment to do this example.
 ```
 $ conda activate nanotechnology
-```
-
-If you want to delete the environment after the lecture, you can delete as below.
-
-```
-$ conda remove -n nanotechnology --all
 ```
 
 3. Install Phonopy
@@ -39,6 +34,14 @@ Make sure that ``phonopy`` command is available.
 ```
 $ phonopy -h
 ```
+
+4. Delete the environment
+
+If you want to delete the environment in the future, you can delete as below.
+```
+$ conda remove -n nanotechnology --all
+```
+
 
 # Phonon dispersion
 
