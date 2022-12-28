@@ -53,11 +53,6 @@ done
 ```
 
 Make sure following files are generated.
-If you'd like to skip this part, you can copy the output file prepared in advance.
-
-```
-cp ./results/Si-001.out ./
-```
 
 ```
 $ ls *.out
