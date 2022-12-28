@@ -69,7 +69,7 @@ $ phonopy -f Si-001.out
 
 ## 5. Calculate phonon dispersion
 
-While force constants are not be stored, they are calculated during this process.
+While force constants are not stored, they are calculated during this process.
 
 ```
 $ cp ../scripts/band.conf ./
