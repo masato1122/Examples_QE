@@ -24,8 +24,14 @@ phonopy -f Si-001.out
 
 ### 5. calculate phonon dispersion
 cp ../scripts/band.conf ./
-phonopy --qe -c $file_scf -p band.conf
+phonopy --qe -c $file_scf -p band.conf --writefc 
 
 ### 6. plot phonon dispersion
-python ../tools/plot_phband_phonopy.py
+#python ../tools/plot_phband_phonopy.py \
+#    --figname fig_phband_phonopy.png
+
+phonopy-bandplot band.yaml -o fig_phband.pdf \
+    --legacy --xlabel "" \
+    --ylabel "Frequency (THz)"
+
 

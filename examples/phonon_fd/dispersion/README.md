@@ -83,8 +83,11 @@ phonopy.yaml: eigenvalues
 ## 6. Plot phonon dispersion
 
 ```
-$ python ../tools/plot_phband_phonopy.py -f band.yaml
+phonopy-bandplot band.yaml -o fig_phband.pdf \
+    --legacy --xlabel "" \
+    --ylabel "Frequency (THz)"
 ```
 
-<img src="./results/fig_phband_phonopy.png" height="200" />
+<img src="./results/fig_phband.pdf" height="200" />
+
 
