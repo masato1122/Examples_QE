@@ -1,6 +1,8 @@
 Calculation of Phonon Dispersion with Finite-displacement method
 =================================================================
 
+See also https://phonopy.github.io/phonopy/qe.html.
+
 ## 1. Prepare supercells with displacements
 
 Suprecells with small displacements are created with Phonopy.
