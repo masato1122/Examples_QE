@@ -3,7 +3,6 @@ Calculation of Phonon Properties with Finite-displacement approach
 
 In this example, phonon dispersion is calculated with the finite displacement method, 
 which may be more intuitive than the DFPT.
-Please also read the official homepage: https://phonopy.github.io/phonopy/qe.html.
 
 # Installation of Phonopy
 
