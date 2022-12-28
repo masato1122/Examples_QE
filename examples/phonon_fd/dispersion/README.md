@@ -40,7 +40,7 @@ tprnfor = .true.
 nat = 64
 ```
 
-``tprnfor`` is set to be ``.true.`` shen atomic forces are calculated and 
+``tprnfor`` is set to be ``.true.`` to calculate atomic forces and 
 ``nat`` is the number of atoms in a supercell.
 
 
