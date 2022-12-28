@@ -90,6 +90,16 @@ phonopy-bandplot band.yaml -o fig_phband.pdf \
     --ylabel "Frequency (THz)"
 ```
 
-<img src="./results/fig_phband.pdf" height="200" />
+## 7. Calculate DOS
+
+```
+$ phonopy --plot --save --dos ../scripts/mesh.conf
+```
+
+## 8. Calcualte thermal properties
+
+```
+$ phonopy --plot --save --thermal-property ../scripts/mesh.conf
+```
 
 

@@ -8,7 +8,7 @@ def main(options):
     cell, _ = read_pwscf(options.file_prim)
     q2r = PH_Q2R(options.file_fc)
     q2r.run(cell)
-    q2r.write_force_constants(fc_format='txt')
+    q2r.write_force_constants(fc_format='text')
 
 if __name__ == '__main__':
     parser = OptionParser()
