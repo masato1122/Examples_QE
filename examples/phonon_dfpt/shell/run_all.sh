@@ -3,12 +3,6 @@
 #####################
 pw.x < scf.in | tee scf.out
 
-######################
-## phonon vibration ##
-######################
-###ph.x < ph_G.in | tee ph_G.out
-###ph.x < ph_X.in | tee ph_X.out
-
 #####################
 ## force constants ##
 #####################
@@ -35,4 +29,10 @@ python ../tools/plot_phband.py \
 #########
 matdyn.x < dos.in | tee dos.out
 python ../tools/plot_dos.py -f Si.dos
+
+######################
+## phonon vibration ##
+######################
+ph.x < ph_G.in | tee ph_G.out
+dynmat.x < eigen_G.in | tee eigen_G.out
 
